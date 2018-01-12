@@ -5,7 +5,7 @@
              x:Class="XamarinApp.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome   Xamarin.Forms!"
+            <Label Text="Welcome Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
