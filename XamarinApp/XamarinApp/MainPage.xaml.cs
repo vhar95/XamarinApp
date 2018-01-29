@@ -13,5 +13,15 @@ namespace XamarinApp
         {
             InitializeComponent();
         }
+
+        private async void Nuevo_User(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new paginas.RegistroUser());
+        }
+
+         private async void Ex_User(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new paginas.LoginUser());
+        }
     }
 }
