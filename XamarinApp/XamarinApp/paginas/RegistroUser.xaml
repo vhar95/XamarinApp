@@ -18,6 +18,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <StackLayout Grid.Row="1" Orientation="Vertical">
                     <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White" Opacity="0.8">
@@ -68,17 +69,33 @@
                 </StackLayout>
                 <StackLayout Grid.Row="9" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Button x:Name="btnFoto" Text="Elige tu foto de perfil" BackgroundColor="LightBlue" Margin="10" TextColor="Black" WidthRequest="200" HorizontalOptions="Center"/>
-                        <Image x:Name="imgFoto" Source="" VerticalOptions="StartAndExpand" HorizontalOptions="Center" Aspect="AspectFill" HeightRequest="150" WidthRequest="150" Margin="10"/>
-                    </StackLayout>
-                </StackLayout>
-                <StackLayout Grid.Row="10" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
-                    <StackLayout Orientation="Vertical" Margin="40,20">
                         <Label Text="Fecha de Nacimiento" />
                         <DatePicker x:Name="nacimientoDatePicker" Format="dd-MM-yyyy"/>
                     </StackLayout>
                 </StackLayout>
+                <StackLayout Grid.Row="10" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+                    <StackLayout Orientation="Vertical" Margin="40,20">
+                        <Picker x:Name="pickerNivel" Title="Nivel">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>A2</x:String>
+                                    <x:String>B1</x:String>
+                                    <x:String>B2</x:String>
+                                    <x:String>C1</x:String>
+                                    <x:String>C2</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
+                </StackLayout>
                 <StackLayout Grid.Row="11" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+                    <StackLayout Orientation="Vertical" Margin="40,20">
+                        <Button x:Name="btnFoto" Text="Elige tu foto de perfil" BackgroundColor="LightBlue" Margin="10" TextColor="Black" WidthRequest="200" HorizontalOptions="Center"/>
+                        <Image x:Name="imgFoto" Source="" VerticalOptions="StartAndExpand" HorizontalOptions="Center" Aspect="AspectFill" HeightRequest="150" WidthRequest="150" Margin="10"/>
+                    </StackLayout>
+                </StackLayout>
+                
+                <StackLayout Grid.Row="12" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
                         <Button x:Name="Registro" Text="CONTINUAR" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Volver_Login"/>
                     </StackLayout>
