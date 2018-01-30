@@ -18,11 +18,22 @@ namespace XamarinApp.paginas
 			InitializeComponent ();
             menuList = new List<menuItems.MasterPageItem>();
 
-            var page1 = new menuItems.MasterPageItem() { Title = "Mi perfil", Icon = "itemIcon1.png", TargetType = typeof(paginas.Test) };
-            var page2 = new menuItems.MasterPageItem() { Title = "Contacto", Icon = "itemIcon2.png", TargetType = typeof(paginas.Test) };
+            var page1 = new menuItems.MasterPageItem() { Title = "Mi perfil", Icon = "perfil.png", TargetType = typeof(paginas.Test) };
+            var page2 = new menuItems.MasterPageItem() { Title = "Contacto", Icon = "contacto.png", TargetType = typeof(paginas.Test) };
+            var page3 = new menuItems.MasterPageItem() { Title = "Cerrar Sesión", Icon = "out.png", TargetType = typeof(paginas.Test) };
+            var page4 = new menuItems.MasterPageItem() { Title = "Faq", Icon = "faq.png", TargetType = typeof(paginas.Test) };
+            var page5 = new menuItems.MasterPageItem() { Title = "Cursos", Icon = "cursos.png", TargetType = typeof(paginas.Test) };
+            var page6 = new menuItems.MasterPageItem() { Title = "Mis Cursos", Icon = "carpetas.png", TargetType = typeof(paginas.Test) };
+            var page7 = new menuItems.MasterPageItem() { Title = "Noticias", Icon = "noticias.png", TargetType = typeof(paginas.Test) };
+
 
             menuList.Add(page1);
+            menuList.Add(page6);
+            menuList.Add(page5);
+            menuList.Add(page7);
             menuList.Add(page2);
+            menuList.Add(page4);
+            menuList.Add(page3);
 
             navigationDrawerList.ItemsSource = menuList;
 

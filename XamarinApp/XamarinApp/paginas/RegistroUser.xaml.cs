@@ -19,7 +19,7 @@ namespace XamarinApp.paginas
 
         private async void Volver_Login(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new paginas.LoginUser());
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }
