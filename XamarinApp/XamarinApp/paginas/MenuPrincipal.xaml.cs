@@ -18,12 +18,12 @@ namespace XamarinApp.paginas
 			InitializeComponent ();
             menuList = new List<menuItems.MasterPageItem>();
 
-            var page1 = new menuItems.MasterPageItem() { Title = "Mi perfil", Icon = "perfil.png", TargetType = typeof(paginas.Test) };
+            var page1 = new menuItems.MasterPageItem() { Title = "Mi perfil", Icon = "perfil.png", TargetType = typeof(paginas.MiPerfil) };
             var page2 = new menuItems.MasterPageItem() { Title = "Contacto", Icon = "contacto.png", TargetType = typeof(paginas.Test) };
             var page3 = new menuItems.MasterPageItem() { Title = "Cerrar Sesión", Icon = "out.png", TargetType = typeof(paginas.Test) };
             var page4 = new menuItems.MasterPageItem() { Title = "Faq", Icon = "faq.png", TargetType = typeof(paginas.Test) };
-            var page5 = new menuItems.MasterPageItem() { Title = "Cursos", Icon = "cursos.png", TargetType = typeof(paginas.Test) };
-            var page6 = new menuItems.MasterPageItem() { Title = "Mis Cursos", Icon = "carpetas.png", TargetType = typeof(paginas.Test) };
+            var page5 = new menuItems.MasterPageItem() { Title = "Cursos", Icon = "cursos.png", TargetType = typeof(paginas.Cursos) };
+            var page6 = new menuItems.MasterPageItem() { Title = "Mis Cursos", Icon = "carpetas.png", TargetType = typeof(paginas.MisCursos) };
             var page7 = new menuItems.MasterPageItem() { Title = "Noticias", Icon = "noticias.png", TargetType = typeof(paginas.Test) };
 
 
@@ -37,7 +37,7 @@ namespace XamarinApp.paginas
 
             navigationDrawerList.ItemsSource = menuList;
 
-            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(paginas.Test)));
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(paginas.Inicio)));
         }
 
         private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)

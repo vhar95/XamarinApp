@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.paginas.Cursos">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="10">
+            <Label Text="Cursos Disponibles" FontSize="34"/>
+            <ListView x:Name="list">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                                <Image Source="{Binding URL}" HorizontalOptions="End" Aspect="AspectFit" WidthRequest="200" HeightRequest="200" />
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text = "{Binding NombreCurso}" FontSize="24" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 40"/>
+                                    <Label Text = "{Binding Precio}" AbsoluteLayout.LayoutBounds="50, 35, 200, 25"/>
+                                    <Label Text = "{Binding DuracionCurso}" AbsoluteLayout.LayoutBounds="50, 35, 200, 25"/>
+                                    <Label Text = "{Binding Lugar}" AbsoluteLayout.LayoutBounds="50, 35, 200, 25"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

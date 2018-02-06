@@ -4745,6 +4745,9 @@ namespace XamarinApp.Droid
 			// aapt resource value: 0x7f0b0006
 			public const int Theme_MediaRouter_LightControlPanel = 2131427334;
 			
+			// aapt resource value: 0x7f0b018c
+			public const int Theme_Splash = 2131427724;
+			
 			// aapt resource value: 0x7f0b011f
 			public const int ThemeOverlay_AppCompat = 2131427615;
 			

@@ -1,12 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:XamarinApp"
-             x:Class="XamarinApp.MainPage" Title="Twenix" NavigationPage.HasBackButton="False">
+             x:Class="XamarinApp.paginas.Inicio">
     <ContentPage.Content>
         <Grid x:Name="LayoutRoot" BackgroundColor="White">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
@@ -17,19 +15,11 @@
                     <Image Source="fondo.png" Aspect="AspectFit" Margin="10" HeightRequest="250" WidthRequest="250"  VerticalOptions="Center" HorizontalOptions="Center"/>
                 </StackLayout>
             </StackLayout>
-            <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
-                <StackLayout Orientation="Vertical" Margin="40,20">
-                    <Button x:Name="callNuevoUser" Text="EMPEZAR A HABLAR TWENIX" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Nuevo_User"/>
-                    <Label Text="" TextColor="#0072BD"/>
+            <StackLayout Grid.Row="2" Orientation="Vertical"  BackgroundColor="White" Opacity="0.8">
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" Margin="10">
+                    <Label FontSize = "20" Text="BIENVENIDO A TWENIX" />
                 </StackLayout>
             </StackLayout>
-            <StackLayout Grid.Row="3" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
-                <StackLayout Orientation="Vertical" Margin="40,20">
-                    <Button x:Name="callExUser" Text="YA SOY TWENIX" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Ex_User"/>
-                    <Label Text="" TextColor="#0072BD"/>
-                </StackLayout>
-            </StackLayout>
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>
