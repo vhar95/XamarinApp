@@ -15,7 +15,8 @@ namespace XamarinApp.paginas
 		public RegistroUser ()
 		{
 			InitializeComponent ();
-		}
+            this.BindingContext = new modelo.UserView();
+        }
 
         private async void Volver_Login(object sender, EventArgs e)
         {

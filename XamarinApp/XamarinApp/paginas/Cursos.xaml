@@ -5,17 +5,14 @@
     <ContentPage.Content>
         <StackLayout Spacing="10" Padding="10">
             <Label Text="Cursos Disponibles" FontSize="34"/>
-            <ListView x:Name="list">
+            <ListView x:Name="Post_List">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
-                                <Image Source="{Binding URL}" HorizontalOptions="End" Aspect="AspectFit" WidthRequest="200" HeightRequest="200" />
                                 <StackLayout Orientation="Vertical">
-                                    <Label Text = "{Binding NombreCurso}" FontSize="24" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 40"/>
-                                    <Label Text = "{Binding Precio}" AbsoluteLayout.LayoutBounds="50, 35, 200, 25"/>
-                                    <Label Text = "{Binding DuracionCurso}" AbsoluteLayout.LayoutBounds="50, 35, 200, 25"/>
-                                    <Label Text = "{Binding Lugar}" AbsoluteLayout.LayoutBounds="50, 35, 200, 25"/>
+                                    <Label Text = "{Binding Nombre}" FontSize="24" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 40"/>
+                                    <Label Text = "{Binding Duracion}" AbsoluteLayout.LayoutBounds="50, 35, 200, 25"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
