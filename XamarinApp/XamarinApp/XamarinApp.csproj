@@ -58,6 +58,9 @@
     <Compile Include="paginas\LoginUser.xaml.cs">
       <DependentUpon>LoginUser.xaml</DependentUpon>
     </Compile>
+    <Compile Include="paginas\LogOut.xaml.cs">
+      <DependentUpon>LogOut.xaml</DependentUpon>
+    </Compile>
     <Compile Include="paginas\MenuPrincipal.xaml.cs">
       <DependentUpon>MenuPrincipal.xaml</DependentUpon>
     </Compile>
@@ -155,6 +158,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="paginas\Cursos.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="paginas\LogOut.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinApp.paginas.MiPerfil">
+             x:Class="XamarinApp.paginas.MiPerfil" Title="Mi Perfil">
     <ContentPage.Content>
         <ScrollView>
             <Grid x:Name="LayoutRoot" BackgroundColor="White">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -88,13 +87,6 @@
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="11" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
-                    <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Button x:Name="btnFoto" Text="Elige tu foto de perfil" BackgroundColor="LightBlue" Margin="10" TextColor="Black" WidthRequest="200" HorizontalOptions="Center"/>
-                        <Image x:Name="imgFoto" Source="" VerticalOptions="StartAndExpand" HorizontalOptions="Center" Aspect="AspectFill" HeightRequest="150" WidthRequest="150" Margin="10"/>
-                    </StackLayout>
-                </StackLayout>
-
-                <StackLayout Grid.Row="12" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
                         <Button x:Name="Registro" Text="ACTUALIZAR" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Volver_Principal"/>
                     </StackLayout>
