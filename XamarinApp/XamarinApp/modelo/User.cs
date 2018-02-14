@@ -187,7 +187,7 @@ namespace XamarinApp.modelo
                 {
 
                     nivel = value;
-                    OnPropertyChanged("NivelesSe");
+                    OnPropertyChanged("Niveles");
                 }
 
             }

@@ -26,6 +26,12 @@ namespace XamarinApp.modelo
         };
         public List<string> Niveles => niveles;
 
+        List<string> sexos = new List<string>
+        {
+            "Hombre","Mujer"
+        };
+        public List<string> Sexos => sexos;
+
         public UserView()
         {
             Nuevo = new Command(() => {
