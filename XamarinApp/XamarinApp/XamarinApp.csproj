@@ -47,6 +47,7 @@
     <Compile Include="modelo\CurseClassesView.cs" />
     <Compile Include="modelo\CurseView.cs" />
     <Compile Include="modelo\User.cs" />
+    <Compile Include="modelo\UserLogin.cs" />
     <Compile Include="modelo\UserView.cs" />
     <Compile Include="paginas\Cursos.xaml.cs">
       <DependentUpon>Cursos.xaml</DependentUpon>

@@ -18,12 +18,12 @@
             </StackLayout>
             <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                 <StackLayout Orientation="Vertical" Margin="40,20">
-                    <Entry Placeholder="Correo" />
+                    <Entry Text="" x:Name="EntryCorreo" Placeholder="Correo" />
                 </StackLayout>
             </StackLayout>
             <StackLayout Grid.Row="3" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                 <StackLayout Orientation="Vertical" Margin="40,20">
-                    <Entry Placeholder="Contraseña" />
+                    <Entry Placeholder="Contraseña" Text="" x:Name="EntryPassword" IsPassword="True"/>
                 </StackLayout>
             </StackLayout>
             <StackLayout Grid.Row="4" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
