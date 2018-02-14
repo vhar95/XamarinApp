@@ -42,7 +42,7 @@
                 </StackLayout>
                 <StackLayout Grid.Row="5" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Picker x:Name="pickerSexo" Title="Sexo" ItemsSource="{Binding Sexos}" SelectedItem="{Binding SexoS}" />
+                        <Picker x:Name="pickerSexo" Title="Sexo" ItemsSource="{Binding Sexos}" SelectedItem="{Binding Sexo}" />
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="6" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
@@ -73,7 +73,7 @@
                 </StackLayout>
                 <StackLayout Grid.Row="11" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Picker x:Name="pickerNivel" Title="Nivel" ItemsSource="{Binding Niveles}" SelectedItem="{Binding NivelS}" />
+                        <Picker x:Name="pickerNivel" Title="Nivel" ItemsSource="{Binding Niveles}" SelectedItem="{Binding Nivel}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="12" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">

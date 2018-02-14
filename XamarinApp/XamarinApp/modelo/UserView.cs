@@ -16,10 +16,6 @@ namespace XamarinApp.modelo
     {
         public ICommand Guardar { get; private set; }
         public ICommand Nuevo { get; private set; }
-
-        private const string url = "http://localhost:8000/api/usuarios";
-        private HttpClient _Client = new HttpClient();
-        DateTime f = DateTime.Today.Date;
         List<string> niveles = new List<string>
         {
             "A2","B1","B2","C1","C2"
@@ -31,7 +27,10 @@ namespace XamarinApp.modelo
             "Hombre","Mujer"
         };
         public List<string> Sexos => sexos;
-
+        private const string url = "http://localhost:8000/api/usuarios";
+        private HttpClient _Client = new HttpClient();
+        DateTime f = DateTime.Today.Date;
+      
         public UserView()
         {
             Nuevo = new Command(() => {
