@@ -19,6 +19,7 @@ namespace XamarinApp.modelo
         private string skype;
         private string fechaN;
         private string nivel;
+        private string pass;
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propiedad)
@@ -192,6 +193,26 @@ namespace XamarinApp.modelo
 
             }
         }
+        public string Pass
+        {
+            get
+            {
+                return pass;
+            }
+
+            set
+            {
+
+                if (pass != value)
+                {
+
+                    pass = value;
+                    OnPropertyChanged("pass");
+                }
+
+            }
+        }
+
 
     }
 

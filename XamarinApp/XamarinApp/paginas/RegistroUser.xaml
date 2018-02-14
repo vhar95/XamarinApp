@@ -18,6 +18,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <StackLayout Grid.Row="1" Orientation="Vertical">
                     <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White" Opacity="0.8">
@@ -51,26 +52,31 @@
                 </StackLayout>
                 <StackLayout Grid.Row="7" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Teléfono" Text="{Binding Telefono}"/>
+                        <Entry Placeholder="Contraseña" Text="{Binding Pass}" IsPassword="True"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="8" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Usuario Skype" Text="{Binding Skype}"/>
+                        <Entry Placeholder="Teléfono" Text="{Binding Telefono}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="9" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+                    <StackLayout Orientation="Vertical" Margin="40,20">
+                        <Entry Placeholder="Usuario Skype" Text="{Binding Skype}"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="10" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
                         <Label Text="Fecha de Nacimiento" />
                         <DatePicker x:Name="nacimientoDatePicker" Format="dd-MM-yyyy"/>
                     </StackLayout>
                 </StackLayout>
-                <StackLayout Grid.Row="10" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+                <StackLayout Grid.Row="11" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
                         <Picker x:Name="pickerNivel" Title="Nivel" ItemsSource="{Binding Niveles}" SelectedItem="{Binding NivelS}" />
                     </StackLayout>
                 </StackLayout>
-                <StackLayout Grid.Row="11" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+                <StackLayout Grid.Row="12" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
                         <Button x:Name="Registro" Text="CONTINUAR" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Command="{Binding Guardar}" Clicked="Volver_Login"/>
                     </StackLayout>

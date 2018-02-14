@@ -46,6 +46,7 @@ namespace XamarinApp.modelo
                 Skype = string.Empty;
                 FechaN = string.Empty;
                 Nivel = string.Empty;
+                Pass = string.Empty;
 
             }
           );
@@ -57,12 +58,13 @@ namespace XamarinApp.modelo
                     Nombre = Nombre,
                     Apellidos = Apellidos,
                     Nick = Nick,
-                    Sexo = "hombre",
+                    Sexo = Sexo,
                     Correo = Correo,
                     Telefono = Telefono,
                     Skype = Skype,
                     FechaN = f.ToString("yyyy-MM-dd"),
-                    Nivel = Nivel
+                    Nivel = Nivel,
+                    Pass = Pass
             };
                 string con = JsonConvert.SerializeObject(modelo);
                 var content = new StringContent(con, Encoding.UTF8, "application/json");
