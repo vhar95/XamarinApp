@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -25,14 +27,19 @@ namespace XamarinApp.paginas
         {
 
             var response = await _Client.GetAsync(url + EntryCorreo.Text + "/" + EntryPassword.Text);
-
             var code = response.IsSuccessStatusCode;
             System.Diagnostics.Debug.WriteLine(code);
+          
 
             if (code != false)
             {
-                
+                var content = await _Client.GetStringAsync(url + EntryCorreo.Text + "/" + EntryPassword.Text);
+                var get = JsonConvert.DeserializeObject<List<modelo.User>>(content);
+
+                App.UserNombre = get[0].Nombre;
+                App.UserCorreo = get[0].Correo;
                 await DisplayAlert("Login Correcto", "Logeado", "Ok", "Cancelar");
+
                 await Navigation.PushAsync(new paginas.MenuPrincipal());
             }
             else

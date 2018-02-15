@@ -9,10 +9,13 @@ namespace XamarinApp
 {
     public partial class App : Application
     {
+        public static int UserId { get; set; }
+        public static string UserCorreo { get; set; }
+        public static string UserNombre { get; set; }
         public App()
         {
             InitializeComponent();
-
+            
             MainPage = new NavigationPage(new XamarinApp.MainPage());
         }
 

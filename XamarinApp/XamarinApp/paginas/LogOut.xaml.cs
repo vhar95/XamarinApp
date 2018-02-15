@@ -19,6 +19,9 @@ namespace XamarinApp.paginas
 
         private void Cerrar_Sesion(object sender, EventArgs e)
         {
+            App.UserId = 0;
+            App.UserCorreo = "";
+            App.UserNombre = "";
             App.Current.MainPage = new MainPage();
         }
     }

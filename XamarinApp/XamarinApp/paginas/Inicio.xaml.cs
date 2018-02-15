@@ -15,6 +15,7 @@ namespace XamarinApp.paginas
         public Inicio()
         {
             InitializeComponent();
+            nom.Text="Hola " + App.UserNombre;
         }
     }
 }
