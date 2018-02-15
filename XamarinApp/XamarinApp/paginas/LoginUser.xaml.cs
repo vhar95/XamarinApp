@@ -38,6 +38,7 @@ namespace XamarinApp.paginas
 
                 App.UserNombre = get[0].Nombre;
                 App.UserCorreo = get[0].Correo;
+                App.UserId = get[0].id;
                 await DisplayAlert("Login Correcto", "Logeado", "Ok", "Cancelar");
 
                 await Navigation.PushAsync(new paginas.MenuPrincipal());

@@ -20,6 +20,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
+                <Entry Text="{Binding id}" IsVisible="False"/>
                 <StackLayout Grid.Row="1" Orientation="Vertical">
                     <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White" Opacity="0.8">
                         <Label FontSize = "20" Text="Introduce tus datos" />
@@ -81,6 +82,7 @@
                         <Button x:Name="Registro" Text="CONTINUAR" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Command="{Binding Guardar}" Clicked="Volver_Login"/>
                     </StackLayout>
                 </StackLayout>
+                
             </Grid>
         </ScrollView>
     </ContentPage.Content>
