@@ -17,7 +17,7 @@ namespace XamarinApp.modelo
         private string correo;
         private string telefono;
         private string skype;
-        private string fechaN;
+        private DateTime fechaN;
         private string nivel;
         private string pass;
         public event PropertyChangedEventHandler PropertyChanged;
@@ -156,7 +156,7 @@ namespace XamarinApp.modelo
 
             }
         }
-        public string FechaN
+        public DateTime FechaN
         {
             get
             {

@@ -68,7 +68,7 @@
                 <StackLayout Grid.Row="10" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
                         <Label Text="Fecha de Nacimiento" />
-                        <DatePicker x:Name="nacimientoDatePicker" Format="dd-MM-yyyy"/>
+                        <DatePicker x:Name="nacimientoDatePicker" Date="{Binding FechaN}" Format="dd-MM-yyyy" />
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="11" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">

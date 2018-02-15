@@ -43,7 +43,7 @@ namespace XamarinApp.modelo
                 Correo = string.Empty;
                 Telefono = string.Empty;
                 Skype = string.Empty;
-                FechaN = string.Empty;
+                FechaN = f;
                 Nivel = string.Empty;
                 Pass = string.Empty;
 
@@ -61,21 +61,19 @@ namespace XamarinApp.modelo
                     Correo = Correo,
                     Telefono = Telefono,
                     Skype = Skype,
-                    FechaN = f.ToString("yyyy-MM-dd"),
+                    FechaN = FechaN,
                     Nivel = Nivel,
                     Pass = Pass
             };
+
+                
                 string con = JsonConvert.SerializeObject(modelo);
                 var content = new StringContent(con, Encoding.UTF8, "application/json");
                 var result = await _Client.PostAsync(url, content);
                 System.Diagnostics.Debug.WriteLine(con);
-                var code = result.ReasonPhrase;
-                var c = result.RequestMessage;
-                var co = result.Headers;
-                System.Diagnostics.Debug.WriteLine(co);
-                System.Diagnostics.Debug.WriteLine(c);
-                System.Diagnostics.Debug.WriteLine(code);
+                var code = result.IsSuccessStatusCode;
 
+                
             }
              );
         }
