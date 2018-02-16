@@ -16,6 +16,8 @@ namespace XamarinApp.modelo
     {
         public ICommand Guardar { get; private set; }
         public ICommand Nuevo { get; private set; }
+        public ICommand Update { get; private set; }
+
         List<string> niveles = new List<string>
         {
             "A2","B1","B2","C1","C2"
@@ -28,6 +30,7 @@ namespace XamarinApp.modelo
         };
         public List<string> Sexos => sexos;
         private const string url = "http://localhost:8000/api/usuarios";
+        private const string urlUpdate = "http://localhost:8000/api/usuarios/";
         private HttpClient _Client = new HttpClient();
         DateTime f = DateTime.Today.Date;
       
@@ -50,7 +53,7 @@ namespace XamarinApp.modelo
             }
           );
 
-            Guardar = new Command(async () => {
+           Guardar = new Command(async () => {
                 User modelo = new User()
                 {
 
@@ -75,7 +78,45 @@ namespace XamarinApp.modelo
 
                 
             }
-             );
+          );
+
+            Update = new Command(async () =>
+            {
+                User modelo = new User()
+                {
+
+                    Nombre = Nombre,
+                    Apellidos = Apellidos,
+                    Nick = Nick,
+                    Sexo = Sexo,
+                    Correo = Correo,
+                    Telefono = Telefono,
+                    Skype = Skype,
+                    FechaN = FechaN,
+                    Nivel = Nivel,
+                    Pass = Pass
+                };
+
+
+                string con = JsonConvert.SerializeObject(modelo);
+                var content = new StringContent(con, Encoding.UTF8, "application/json");
+                var result = await _Client.PutAsync(urlUpdate+App.UserId, content);
+                System.Diagnostics.Debug.WriteLine(con);
+                var code = result.IsSuccessStatusCode;
+                if(code != false)
+                {
+                    App.UserId = 0;
+                    App.UserCorreo = "";
+                    App.UserNombre = "";
+                    App.Current.MainPage = new NavigationPage(new MainPage());
+                }
+               
+
+            }
+           
+                );
+
+        
         }
     }
 }

@@ -22,7 +22,7 @@ namespace XamarinApp.paginas
             App.UserId = 0;
             App.UserCorreo = "";
             App.UserNombre = "";
-            App.Current.MainPage = new MainPage();
+            App.Current.MainPage = new NavigationPage(new MainPage());
         }
     }
 }

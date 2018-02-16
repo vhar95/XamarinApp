@@ -71,7 +71,7 @@
                 </StackLayout>
                 <StackLayout Grid.Row="11" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Button x:Name="Registro" Text="ACTUALIZAR" BackgroundColor="#0072BD" TextColor="White" FontSize="18"/>
+                        <Button x:Name="Registro" Text="ACTUALIZAR" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Command="{Binding Update}"/>
                     </StackLayout>
                 </StackLayout>
                 
