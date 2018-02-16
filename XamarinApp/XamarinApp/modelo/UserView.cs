@@ -29,6 +29,7 @@ namespace XamarinApp.modelo
             "Hombre","Mujer"
         };
         public List<string> Sexos => sexos;
+
         //private const string url = "http://localhost:8000/api/usuarios";
         //private const string urlUpdate = "http://localhost:8000/api/usuarios/";
         private const string url = "https://apitwe.herokuapp.com/api/usuarios";

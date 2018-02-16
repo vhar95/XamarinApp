@@ -24,15 +24,20 @@ namespace XamarinApp.paginas
         public MiPerfil()
         {
             InitializeComponent();
+            this.BindingContext = this;
+            this.IsBusy = false;
         }
 
 
         protected override async void OnAppearing()
         {
+            IsBusy = true;
             var content = await _Client.GetStringAsync(url + App.UserId);
             modelo.UserView get = JsonConvert.DeserializeObject<modelo.UserView>(content);
             BindingContext = get;
             base.OnAppearing();
+            IsBusy = false;
+           
         }
     }
 }

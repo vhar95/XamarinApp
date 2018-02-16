@@ -9,6 +9,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <ActivityIndicator Grid.RowSpan="4" Color="Red" VerticalOptions="Center" HorizontalOptions="Center"/>
             <StackLayout Grid.Row="1" Orientation="Vertical">
@@ -29,6 +30,11 @@
             <StackLayout Grid.Row="4" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                 <StackLayout Orientation="Vertical" Margin="40,20">
                     <Button x:Name="Loggin" Text="LOGIN" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Principal_M"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Grid.Row="5" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+                <StackLayout Orientation="Vertical" Margin="40,40">
+                    <ActivityIndicator x:Name="activityIndicator" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"   Color="Blue" />
                 </StackLayout>
             </StackLayout>
         </Grid>
