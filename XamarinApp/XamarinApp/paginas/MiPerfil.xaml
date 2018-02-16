@@ -25,72 +25,56 @@
                 </StackLayout>
                 <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Nombre" />
+                        <Entry Placeholder="Nombre" Text="{Binding Nombre}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="3" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Apellidos" />
+                        <Entry Placeholder="Apellidos" Text="{Binding Apellidos}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="4" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Nick Usuario" />
+                        <Entry Placeholder="Nick Usuario" Text="{Binding Nick}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="5" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Picker x:Name="picker" Title="Sexo">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>Hombre</x:String>
-                                    <x:String>Mujer</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
+                        <Picker x:Name="pickerSexo" Title="Sexo" ItemsSource="{Binding Sexos}" SelectedItem="{Binding Sexo}" />
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="6" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Correo Electrónico" />
+                        <Entry Placeholder="Correo Electrónico" Text="{Binding Correo}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="7" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Teléfono" />
+                        <Entry Placeholder="Teléfono" Text="{Binding Telefono}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="8" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Usuario Skype" />
+                        <Entry Placeholder="Usuario Skype" Text="{Binding Skype}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="9" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
                         <Label Text="Fecha de Nacimiento" />
-                        <DatePicker x:Name="nacimientoDatePicker" Format="dd-MM-yyyy"/>
+                        <DatePicker x:Name="nacimientoDatePicker" Date="{Binding FechaN}" Format="dd-MM-yyyy" />
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="10" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Picker x:Name="pickerNivel" Title="Nivel">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>A2</x:String>
-                                    <x:String>B1</x:String>
-                                    <x:String>B2</x:String>
-                                    <x:String>C1</x:String>
-                                    <x:String>C2</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
+                        <Picker x:Name="pickerNivel" Title="Nivel" ItemsSource="{Binding Niveles}" SelectedItem="{Binding Nivel}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="11" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Button x:Name="Registro" Text="ACTUALIZAR" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Volver_Principal"/>
+                        <Button x:Name="Registro" Text="ACTUALIZAR" BackgroundColor="#0072BD" TextColor="White" FontSize="18"/>
                     </StackLayout>
                 </StackLayout>
+                
             </Grid>
         </ScrollView>
     </ContentPage.Content>

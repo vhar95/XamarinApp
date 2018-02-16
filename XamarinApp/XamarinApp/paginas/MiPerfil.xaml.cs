@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,14 +15,22 @@ namespace XamarinApp.paginas
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MiPerfil : ContentPage
     {
+        private const string url = "http://localhost:8000/api/usuarios/";
+        private HttpClient _Client = new HttpClient();
+        
+
         public MiPerfil()
         {
             InitializeComponent();
         }
 
-        private async void Volver_Principal(object sender, EventArgs e)
-        {
 
+        protected override async void OnAppearing()
+        {
+            var content = await _Client.GetStringAsync(url + App.UserId);
+            modelo.UserView get = JsonConvert.DeserializeObject<modelo.UserView>(content);
+            BindingContext = get;
+            base.OnAppearing();
         }
     }
 }
