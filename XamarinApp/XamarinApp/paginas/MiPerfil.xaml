@@ -4,6 +4,8 @@
              x:Class="XamarinApp.paginas.MiPerfil" Title="Mi Perfil">
     <ContentPage.Content>
         <ScrollView>
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
             <Grid x:Name="LayoutRoot" BackgroundColor="White">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -76,6 +78,12 @@
                 </StackLayout>
                 
             </Grid>
+                </StackLayout>
+                <ContentView x:Name="overlay" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"  AbsoluteLayout.LayoutFlags="All" Padding="10, 0" BackgroundColor="Black" Opacity="0.4">
+                    <ActivityIndicator  WidthRequest="110" HeightRequest="70" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Color="DarkBlue"/>
+                </ContentView>
+
+            </AbsoluteLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

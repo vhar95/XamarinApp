@@ -29,13 +29,14 @@ namespace XamarinApp.paginas
 
         private async void Principal_M(object sender, EventArgs e)
         {
-            
+
             this.IsBusy = true;
+            overlay.IsVisible = true;
 
             var response = await _Client.GetAsync(url + EntryCorreo.Text + "/" + EntryPassword.Text);
             var code = response.IsSuccessStatusCode;
             System.Diagnostics.Debug.WriteLine(code);
-          
+
 
             if (code != false)
             {
@@ -46,17 +47,20 @@ namespace XamarinApp.paginas
                 App.UserCorreo = get[0].Correo;
                 App.UserId = get[0].id;
 
+                await DisplayAlert("Login Correcto", "Logeado", "Ok", "Cancelar");
                 this.IsBusy = false;
-                await DisplayAlert("Login Correcto", "Logueado", "Ok", "Cancelar");
-                //this.IsBusy = false;
+                overlay.IsVisible = false;
+
                 await Navigation.PushAsync(new paginas.MenuPrincipal());
             }
             else
             {
+
                 await DisplayAlert("Error Logueando", "Correo o Contraseña incorrectos o no existe", "Ok", "Cancelar");
                 this.IsBusy = false;
+                overlay.IsVisible = false;
+
             }
-            
         }
     }
 }

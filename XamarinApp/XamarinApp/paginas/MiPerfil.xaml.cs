@@ -32,12 +32,15 @@ namespace XamarinApp.paginas
         protected override async void OnAppearing()
         {
             IsBusy = true;
+            overlay.IsVisible = true;
             var content = await _Client.GetStringAsync(url + App.UserId);
             modelo.UserView get = JsonConvert.DeserializeObject<modelo.UserView>(content);
+            IsBusy = false;
+            overlay.IsVisible = false;
             BindingContext = get;
             base.OnAppearing();
-            IsBusy = false;
-           
+
+
         }
     }
 }
