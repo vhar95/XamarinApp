@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.paginas.FAQ" Title="FAQ">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid x:Name="Grid" BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="1" Orientation="Vertical" BackgroundColor="White">
+                    <StackLayout Orientation="Vertical" Margin="25">
+                        <Label FontSize = "23" Text="1) ¿Qué necesito para mis clases TWENIX?" TextColor="#0072BD"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label FontSize = "18" Text="Un dispositivo electrónico como un ordenador portátil, ordenador o tableta conectada a internet y una cuenta en Skype." TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="3" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label Text=""/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="4" Orientation="Vertical" BackgroundColor="White">
+                    <StackLayout Orientation="Vertical" Margin="25">
+                        <Label FontSize = "23" Text="2) ¿Cuánto dura una clase?" TextColor="#0072BD"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="5" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label FontSize = "18" Text="Nuestras clases duran 55 minutos, si no se especifica lo contrario. La razón es que el profesor tiene que tener suficiente tiempo para descansar y estar preparado para la clase siguiente, que puede ser justo después de la tuya. En caso de que se prefieran clases más largas, se debe organizar de antemano con tu profesor." TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="6" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label Text=""/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="7" Orientation="Vertical" BackgroundColor="White">
+                    <StackLayout Orientation="Vertical" Margin="25">
+                        <Label FontSize = "23" Text="3) ¿Cuál es vuestro horario?" TextColor="#0072BD"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="8" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label FontSize = "18" Text="A pesar de nuestras horas de trabajo, son por lo general de lunes a viernes (de 8:00 a 21:00 hora central europea). Esto depende en última instancia del profesor. Sin embargo, nos distinguimos por nuestra flexibilidad, ya que siempre vamos a tratar de adaptarnos a las preferencias de los estudiantes. Tenga en cuenta que podemos estar limitados por nuestra zona horaria." TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="9" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label Text=""/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="10" Orientation="Vertical" BackgroundColor="White">
+                    <StackLayout Orientation="Vertical" Margin="25">
+                        <Label FontSize = "23" Text="4) Creo que mi nivel es muy bajo ¿Puede ser esto un problema?" TextColor="#0072BD"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="11" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label FontSize = "18" Text="No habrá ningún problema. Todos nuestros profesores hablan inglés y español, por lo que podrán comunicarse contigo en tu lengua durante las primeras etapas del proceso de aprendizaje." TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="12" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label Text=""/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="13" Orientation="Vertical" BackgroundColor="White">
+                    <StackLayout Orientation="Vertical" Margin="25">
+                        <Label FontSize = "23" Text="5) ¿También dais clases a niños y adolescentes, o sólo adultos?" TextColor="#0072BD"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="14" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label FontSize = "18" Text="Sí, también damos clases a niños y adolescentes. De hecho, ya tenemos experiencias satisfactorias con ellos. En caso de que se considere necesario, siempre podemos organizar una reunión de Skype o teléfono con el tutor del niño con el fin de aclarar cualquier duda que pueda tener, y tener la oportunidad de conocernos los unos a los otros." TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="15" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label Text=""/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="16" Orientation="Vertical" BackgroundColor="White">
+                    <StackLayout Orientation="Vertical" Margin="25">
+                        <Label FontSize = "23" Text="6) ¿Qué pasa si llego tarde?" TextColor="#0072BD"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="17" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label FontSize = "18" Text="En caso de que llegue tarde, podemos esperarle cinco minutos como máximo. Si no, la clase será más corta, por lo que es mejor darse prisa y ser puntual." TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="18" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label Text=""/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="19" Orientation="Vertical" BackgroundColor="White">
+                    <StackLayout Orientation="Vertical" Margin="25">
+                        <Label FontSize = "23" Text="7) ¿Qué pasa si tengo que cancelar la clase?" TextColor="#0072BD"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="20" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label FontSize = "18" Text="Debe informarnos al menos cinco horas antes de su clase. En caso contrario, procederemos a cobrarte el importe de la clase. En el caso de que sufras una emergencia inesperada justo antes de la clase, dínoslo y lo tendremos en cuenta." TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="21" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label Text=""/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="22" Orientation="Vertical" BackgroundColor="White">
+                    <StackLayout Orientation="Vertical" Margin="25">
+                        <Label FontSize = "23" Text="8) ¿Qué pasa si el profesor no aparece?" TextColor="#0072BD"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="23" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label FontSize = "18" Text="En caso de que no se le haya informado de ello por adelantado, tiene derecho a reclamar el importe total pagado por la clase, y además le aplicaremos un descuento del 50% para la siguiente clase. Si nuestro profesor tiene un problema y no puede aparecer, llamaremos a un sustituto para que pueda tener su clase." TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="24" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label Text=""/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="25" Orientation="Vertical" BackgroundColor="White">
+                    <StackLayout Orientation="Vertical" Margin="25">
+                        <Label FontSize = "23" Text="9) ¿Cómo puedo pagar por las clases?" TextColor="#0072BD"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="26" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label FontSize = "18" Text="Puede encontrar el acceso a la página de pagos en la página principal, donde puede pagar tantas clases como sean necesarias para una o dos personas. Después de seleccionar su opción, solo tendrá que hacer clic en &quot;Añadir al carro&quot;, y luego pasará a una nueva página en la que puede especificar el número de clases. También puede acceder a la página de pagos seleccionando el botón &quot;Acceder a la página de pagos&quot;." TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="27" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label Text=""/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="28" Orientation="Vertical" BackgroundColor="White">
+                    <StackLayout Orientation="Vertical" Margin="25">
+                        <Label FontSize = "23" Text="10) ¿Cuánto descuento puedo obtener si hay más de un estudiante por clase?" TextColor="#0072BD"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="29" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label FontSize = "18" Text="Hay un descuento de 2 euros por persona y clase si ésta tiene dos estudiantes, y de 3 euros si la clase tiene tres personas. Si hay más de tres estudiantes, podemos estudiar una oferta especial personalizada." TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="30" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label Text=""/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

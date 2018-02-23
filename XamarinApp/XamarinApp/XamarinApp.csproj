@@ -48,8 +48,14 @@
     <Compile Include="modelo\CurseView.cs" />
     <Compile Include="modelo\User.cs" />
     <Compile Include="modelo\UserView.cs" />
+    <Compile Include="paginas\Contacto.xaml.cs">
+      <DependentUpon>Contacto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="paginas\Cursos.xaml.cs">
       <DependentUpon>Cursos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\FAQ.xaml.cs">
+      <DependentUpon>FAQ.xaml</DependentUpon>
     </Compile>
     <Compile Include="paginas\Inicio.xaml.cs">
       <DependentUpon>Inicio.xaml</DependentUpon>
@@ -69,14 +75,14 @@
     <Compile Include="paginas\MisCursos.xaml.cs">
       <DependentUpon>MisCursos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="paginas\Noticias.xaml.cs">
+      <DependentUpon>Noticias.xaml</DependentUpon>
+    </Compile>
     <Compile Include="paginas\RegistroUser.xaml.cs">
       <DependentUpon>RegistroUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="paginas\SplashPage.xaml.cs">
       <DependentUpon>SplashPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="paginas\Test.xaml.cs">
-      <DependentUpon>Test.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -126,12 +132,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="paginas\Test.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="paginas\SplashPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -163,6 +163,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="paginas\LogOut.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="paginas\Noticias.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="paginas\FAQ.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="paginas\Contacto.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

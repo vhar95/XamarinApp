@@ -19,13 +19,13 @@
             </StackLayout>
             <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                 <StackLayout Orientation="Vertical" Margin="40,20">
-                    <Button x:Name="callNuevoUser" Text="EMPEZAR A HABLAR TWENIX" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Nuevo_User"/>
+                    <Button x:Name="callNuevoUser" Text="Empezar a hablar TWENIX" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Nuevo_User"/>
                     <Label Text="" TextColor="#0072BD"/>
                 </StackLayout>
             </StackLayout>
             <StackLayout Grid.Row="3" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                 <StackLayout Orientation="Vertical" Margin="40,20">
-                    <Button x:Name="callExUser" Text="YA SOY TWENIX" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Ex_User"/>
+                    <Button x:Name="callExUser" Text="Ya soy TWENIX" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Ex_User"/>
                     <Label Text="" TextColor="#0072BD"/>
                 </StackLayout>
             </StackLayout>

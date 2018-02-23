@@ -16,7 +16,7 @@ namespace XamarinApp.paginas
     public partial class LoginUser : ContentPage
     {
         //private const string url = "http://localhost:8000/api/usuarios/login/";
-        private const string url = "https://apitwe.herokuapp.com//api/usuarios/login/";
+        private const string url = "https://apitwe.herokuapp.com/api/usuarios/login/";
         
         private HttpClient _Client = new HttpClient();
 
@@ -45,14 +45,14 @@ namespace XamarinApp.paginas
                 App.UserNombre = get[0].Nombre;
                 App.UserCorreo = get[0].Correo;
                 App.UserId = get[0].id;
-                
-                await DisplayAlert("Login Correcto", "Logeado", "Ok", "Cancelar");
+
                 this.IsBusy = false;
+                await DisplayAlert("Login Correcto", "Logueado", "Ok", "Cancelar");
+                //this.IsBusy = false;
                 await Navigation.PushAsync(new paginas.MenuPrincipal());
             }
             else
             {
-               
                 await DisplayAlert("Error Logueando", "Correo o Contraseña incorrectos o no existe", "Ok", "Cancelar");
                 this.IsBusy = false;
             }

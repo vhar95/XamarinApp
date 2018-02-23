@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace XamarinApp.paginas
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Test : ContentPage
-	{
-		public Test ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Noticias : ContentPage
+    {
+        public Noticias()
+        {
+            InitializeComponent();
+        }
+    }
 }

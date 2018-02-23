@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinApp.paginas.LogOut" Title="Cerrar Sesion">
+             x:Class="XamarinApp.paginas.LogOut" Title="Cerrar Sesión">
     <ContentPage.Content>
         <Grid x:Name="LayoutRoot" BackgroundColor="White">
             <Grid.RowDefinitions>
@@ -11,12 +11,12 @@
             <ActivityIndicator Grid.RowSpan="2" Color="Red" VerticalOptions="Center" HorizontalOptions="Center"/>
             <StackLayout Grid.Row="1" Orientation="Vertical">
                 <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="40" BackgroundColor="White" Opacity="0.8">
-                    <Label FontSize = "20" Text="Desea Cerrar Sesion?" />
+                    <Label FontSize = "20" Text="¿Desea Cerrar Sesion?" HorizontalOptions="Center"/>
                 </StackLayout>
             </StackLayout>
             <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                 <StackLayout Orientation="Vertical" Margin="40,20">
-                    <Button x:Name="Loggout" Text="LOGOUT" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Cerrar_Sesion"/>
+                    <Button x:Name="Loggout" Text="Cerrar Sesión" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Cerrar_Sesion"/>
                 </StackLayout>
             </StackLayout>
         </Grid>

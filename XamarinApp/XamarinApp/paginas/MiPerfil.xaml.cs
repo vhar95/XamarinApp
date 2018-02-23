@@ -16,7 +16,7 @@ namespace XamarinApp.paginas
     public partial class MiPerfil : ContentPage
     {
         //private const string url = "http://localhost:8000/api/usuarios/";
-        private const string url = "https://apitwe.herokuapp.com//api/usuarios/";
+        private const string url = "https://apitwe.herokuapp.com/api/usuarios/";
         
         private HttpClient _Client = new HttpClient();
         

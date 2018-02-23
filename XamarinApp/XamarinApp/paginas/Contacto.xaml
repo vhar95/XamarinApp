@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.paginas.Contacto" Title="Contacto">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="¿En qué podemos ayudarte?" FontSize="30" HorizontalTextAlignment="Center"/>
+            <Grid x:Name="Gridd" BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>                    
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="1" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label FontSize = "20" Text="Si tienes alguna duda o cualquier pregunta, no dudes en ponerte en contacto con nosotros." HorizontalTextAlignment="Center" TextColor="#0072BD"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="30" BackgroundColor="White">
+                        <Label FontSize = "16" Text="Teléfono: +34 684 25 27 43" TextColor="Black"/>
+                        <Label FontSize = "16" Text="Correo electrónico: twenix@twenix.es" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="3" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Label FontSize = "20" Text="Acceda a nuestra sección FAQ para ver las preguntas más frecuentes." HorizontalTextAlignment="Center" TextColor="#0072BD"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="4" Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White">
+                        <Button x:Name="faqq" Text="Nuestras FAQ" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Acceder_FAQ"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

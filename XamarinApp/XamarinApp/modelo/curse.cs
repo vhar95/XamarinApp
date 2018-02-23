@@ -21,11 +21,11 @@ namespace XamarinApp.modelo
             {
                 new Curse()
                 {
-                    Name="Ingles A2", Duration=2, Location="Almeria"
+                    Name="Inglés A2", Duration=2, Location="Almería"
                 },
                 new Curse()
                 {
-                    Name="Ingles B2", Duration=1, Location="Aguadulce"
+                    Name="Inglés B2", Duration=1, Location="Aguadulce"
                 },
 
             };

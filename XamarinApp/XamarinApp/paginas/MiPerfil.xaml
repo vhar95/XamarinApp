@@ -20,42 +20,42 @@
                 </Grid.RowDefinitions>
                 <StackLayout Grid.Row="1" Orientation="Vertical">
                     <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White" Opacity="0.8">
-                        <Label FontSize = "20" Text="Actualizar Perfil" />
+                        <Label FontSize = "20" Text="Actualizar mi Perfil" />
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Nombre" Text="{Binding Nombre}"/>
+                        <Entry Placeholder="Tu nombre" Text="{Binding Nombre}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="3" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Apellidos" Text="{Binding Apellidos}"/>
+                        <Entry Placeholder="Tus apellidos" Text="{Binding Apellidos}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="4" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Nick Usuario" Text="{Binding Nick}"/>
+                        <Entry Placeholder="Tu Nick de Usuario" Text="{Binding Nick}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="5" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Picker x:Name="pickerSexo" Title="Sexo" ItemsSource="{Binding Sexos}" SelectedItem="{Binding Sexo}" />
+                        <Picker x:Name="pickerSexo" Title="Tu sexo" ItemsSource="{Binding Sexos}" SelectedItem="{Binding Sexo}" />
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="6" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Correo Electrónico" Text="{Binding Correo}"/>
+                        <Entry Placeholder="Tu correo electrónico" Text="{Binding Correo}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="7" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Teléfono" Text="{Binding Telefono}"/>
+                        <Entry Placeholder="Tu teléfono" Text="{Binding Telefono}" Keyboard="Telephone"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="8" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Usuario Skype" Text="{Binding Skype}"/>
+                        <Entry Placeholder="Tu Usuario de Skype" Text="{Binding Skype}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="9" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
@@ -66,12 +66,12 @@
                 </StackLayout>
                 <StackLayout Grid.Row="10" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Picker x:Name="pickerNivel" Title="Nivel" ItemsSource="{Binding Niveles}" SelectedItem="{Binding Nivel}"/>
+                        <Picker x:Name="pickerNivel" Title="Tu nivel de inglés actual es..." ItemsSource="{Binding Niveles}" SelectedItem="{Binding Nivel}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="11" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Button x:Name="Registro" Text="ACTUALIZAR" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Command="{Binding Update}"/>
+                        <Button x:Name="Registro" Text="ACTUALIZAR MIS DATOS" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Command="{Binding Update}"/>
                     </StackLayout>
                 </StackLayout>
                 

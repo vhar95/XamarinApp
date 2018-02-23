@@ -10,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace XamarinApp.paginas
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Inicio : ContentPage
+    public partial class FAQ : ContentPage
     {
-        public Inicio()
+        public FAQ()
         {
             InitializeComponent();
-            nom.Text="Hola " + App.UserNombre + " !!!";
         }
     }
 }

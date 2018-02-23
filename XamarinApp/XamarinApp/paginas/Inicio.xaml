@@ -18,7 +18,7 @@
             <StackLayout Grid.Row="2" Orientation="Vertical"  BackgroundColor="White" Opacity="0.8">
                 <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" Margin="10">
                     <Label x:Name="nom" FontSize = "20" VerticalOptions="Center" HorizontalOptions="Center"/>
-                    <Label FontSize = "20" Text="BIENVENIDO A TWENIX" />
+                    <Label FontSize = "20" Text="Bienvenido a TWENIX" />
                 </StackLayout>
             </StackLayout>
         </Grid>

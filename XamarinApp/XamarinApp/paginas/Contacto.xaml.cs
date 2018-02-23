@@ -10,12 +10,17 @@ using Xamarin.Forms.Xaml;
 namespace XamarinApp.paginas
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Inicio : ContentPage
+    public partial class Contacto : ContentPage
     {
-        public Inicio()
+        public Contacto()
         {
             InitializeComponent();
-            nom.Text="Hola " + App.UserNombre + " !!!";
+        }
+
+        private async void Acceder_FAQ(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new FAQ());
         }
     }
 }

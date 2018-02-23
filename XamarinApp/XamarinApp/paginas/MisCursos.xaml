@@ -8,7 +8,19 @@
             <ListView x:Name="list">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Name}" Detail="{Binding Duration}"/>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="" FontSize="20"/>
+                                    <Label Text="{Binding Name}" TextColor="#FC0BB4" FontSize="20"/>
+                                    <Label Text="   "/>
+                                    <Label Text="{Binding Duration}" TextColor="#0072BD" FontSize="20"/>
+                                    <Label Text="mes/es" TextColor="#0072BD" FontSize="20"/>
+                                    <Label Text="   "/>
+                                    <Label Text="{Binding Location}" TextColor="#0072BD" FontSize="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell> 
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
