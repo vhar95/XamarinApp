@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Gracias a esta página, podrás estar al día de todas las novedades de nuestra academia de inglés." FontSize="20" HorizontalTextAlignment="Center"/>
-            <Grid x:Name="Gridd" BackgroundColor="White">
+            <Grid x:Name="Gridd">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>

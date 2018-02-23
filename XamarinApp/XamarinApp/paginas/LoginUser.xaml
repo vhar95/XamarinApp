@@ -5,20 +5,20 @@
     <ContentPage.Content>
         <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
-        <Grid x:Name="LayoutRoot" BackgroundColor="White">
+        <Grid x:Name="LayoutRoot">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <ActivityIndicator Grid.RowSpan="4" Color="Blue" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <ActivityIndicator Grid.RowSpan="4" Color="#0072BD" VerticalOptions="Center" HorizontalOptions="Center"/>
             <StackLayout Grid.Row="1" Orientation="Vertical">
-                <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="40" BackgroundColor="White" Opacity="0.8">
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="40" Opacity="0.8">
                     <Label FontSize = "20" Text="Introduce tu correo y contraseña para que podamos identificarte" />
                 </StackLayout>
             </StackLayout>
-            <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+            <StackLayout Grid.Row="2" Orientation="Vertical" Opacity="0.8">
                 <StackLayout Orientation="Vertical" Margin="40,20">
                             <Entry Text="" x:Name="EntryCorreo" Placeholder="Tu correo">
                                 <Entry.Behaviors>
@@ -27,12 +27,12 @@
                             </Entry>
                 </StackLayout>
             </StackLayout>
-            <StackLayout Grid.Row="3" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+            <StackLayout Grid.Row="3" Orientation="Vertical" Opacity="0.8">
                 <StackLayout Orientation="Vertical" Margin="40,20">
                     <Entry Placeholder="Tu contraseña" Text="" x:Name="EntryPassword" IsPassword="True"/>
                 </StackLayout>
             </StackLayout>
-            <StackLayout Grid.Row="4" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+            <StackLayout Grid.Row="4" Orientation="Vertical" Opacity="0.8">
                 <StackLayout Orientation="Vertical" Margin="40,20">
                     <Button x:Name="Loggin" Text="LOGIN" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Principal_M"/>
                 </StackLayout>
@@ -40,7 +40,7 @@
         </Grid>
             </StackLayout>
             <ContentView x:Name="overlay" IsVisible="False" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"  AbsoluteLayout.LayoutFlags="All" Padding="10, 0" BackgroundColor="Black" Opacity="0.4">
-                <ActivityIndicator  WidthRequest="110" HeightRequest="70" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Color="DarkBlue"/>
+                <ActivityIndicator  WidthRequest="110" HeightRequest="70" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Color="#0072BD"/>
             </ContentView>
 
         </AbsoluteLayout>
