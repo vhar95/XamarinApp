@@ -19,6 +19,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    
                 </Grid.RowDefinitions>
                 <Entry Text="{Binding id}" IsVisible="False"/>
                 <StackLayout Grid.Row="1" Orientation="Vertical">
