@@ -11,15 +11,7 @@ using Xamarin.Forms.Xaml;
 
 namespace XamarinApp.paginas
 {
-    public class Curse
-    {
-        public int ID { get; set; }
-
-        public string Nombre { get; set; }
-
-        public string Duracion { get; set; }
-
-    }
+   
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Cursos : ContentPage
@@ -28,20 +20,24 @@ namespace XamarinApp.paginas
         private const string url = "https://apitwe.herokuapp.com/api/cursos";
         
         private HttpClient _Client = new HttpClient();
-        private ObservableCollection<Curse> _post;
+        private ObservableCollection<modelo.CurseClasses> _post;
         
         public Cursos ()
 		{
 			InitializeComponent ();
+
+            
         }
 
         protected override async void OnAppearing()
         {
             var content = await _Client.GetStringAsync(url);
-            var post = JsonConvert.DeserializeObject<List<Curse>>(content);
-            _post = new ObservableCollection<Curse>(post);
+            var post = JsonConvert.DeserializeObject<List<modelo.CurseClasses>>(content);
+            _post = new ObservableCollection<modelo.CurseClasses>(post);
             Post_List.ItemsSource = _post;
             base.OnAppearing();
         }
+
+        
     }
 }

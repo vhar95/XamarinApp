@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace XamarinApp.modelo
 {
-    public class CurseClasses
+    public class SelectableItemWrapper<T>
     {
-        public int ID { get; set; }
-        public string Nombre { get; set; }
-        public string Duracion { get; set; }
+        public bool IsSelected { get; set; }
+        public T Item { get; set; }
     }
 }

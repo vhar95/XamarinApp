@@ -47,6 +47,7 @@
     <Compile Include="modelo\CurseClasses.cs" />
     <Compile Include="modelo\CurseClassesView.cs" />
     <Compile Include="modelo\CurseView.cs" />
+    <Compile Include="modelo\SelectableItemWrapper.cs" />
     <Compile Include="modelo\User.cs" />
     <Compile Include="modelo\UserView.cs" />
     <Compile Include="paginas\Contacto.xaml.cs">
