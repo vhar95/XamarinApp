@@ -48,6 +48,7 @@
     <Compile Include="modelo\CurseClassesView.cs" />
     <Compile Include="modelo\CurseView.cs" />
     <Compile Include="modelo\User.cs" />
+    <Compile Include="modelo\UserCurse.cs" />
     <Compile Include="modelo\UserView.cs" />
     <Compile Include="paginas\Contacto.xaml.cs">
       <DependentUpon>Contacto.xaml</DependentUpon>
@@ -67,6 +68,9 @@
     <Compile Include="paginas\LogOut.xaml.cs">
       <DependentUpon>LogOut.xaml</DependentUpon>
     </Compile>
+    <Compile Include="paginas\Matricularse.xaml.cs">
+      <DependentUpon>Matricularse.xaml</DependentUpon>
+    </Compile>
     <Compile Include="paginas\MenuPrincipal.xaml.cs">
       <DependentUpon>MenuPrincipal.xaml</DependentUpon>
     </Compile>
@@ -78,9 +82,6 @@
     </Compile>
     <Compile Include="paginas\Noticias.xaml.cs">
       <DependentUpon>Noticias.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="paginas\Prueba.xaml.cs">
-      <DependentUpon>Prueba.xaml</DependentUpon>
     </Compile>
     <Compile Include="paginas\RegistroUser.xaml.cs">
       <DependentUpon>RegistroUser.xaml</DependentUpon>
@@ -190,7 +191,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="paginas\Prueba.xaml">
+    <EmbeddedResource Include="paginas\Matricularse.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

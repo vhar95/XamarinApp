@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace XamarinApp.paginas
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Prueba : ContentPage
+    public partial class Matricularse : ContentPage
     {
-        public Prueba(modelo.CurseClassesView curse)
+        public Matricularse(modelo.CurseClassesView curse)
         {
             InitializeComponent();
             BindingContext = curse;

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.paginas.Matricularse" Title="Detalles Curso">
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                    <Grid x:Name="LayoutRoot" BackgroundColor="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Row="1" Orientation="Vertical">
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White" Opacity="0.8">
+                                <Label FontSize = "20" Text="Detalles Curso" />
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+                            <StackLayout Orientation="Vertical" Margin="40,20">
+                                <Label Text="{Binding Nombre}"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Row="3" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+                            <StackLayout Orientation="Vertical" Margin="40,20">
+                                <Label Text="{Binding Duracion}"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Row="4" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+                            <StackLayout Orientation="Vertical" Margin="40,20">
+                                <Button x:Name="Matricula" Text="ENTRAR AL CURSO" BackgroundColor="#0072BD" TextColor="White" FontSize="18" />
+                            </StackLayout>
+                        </StackLayout>
+
+                    </Grid>
+                </StackLayout>
+                <!--<ContentView x:Name="overlay" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"  AbsoluteLayout.LayoutFlags="All" Padding="10, 0" BackgroundColor="Black" Opacity="0.4">
+                   <ActivityIndicator  WidthRequest="110" HeightRequest="70" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Color="#0072BD"/>
+                </ContentView>-->
+
+            </AbsoluteLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

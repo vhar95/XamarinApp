@@ -31,7 +31,7 @@ namespace XamarinApp.paginas
             Post_List.ItemSelected += async (sender, e) =>
             {
                 modelo.CurseClassesView m = (modelo.CurseClassesView)e.SelectedItem;
-                await Navigation.PushAsync(new paginas.Prueba(m));
+                await Navigation.PushAsync(new paginas.Matricularse(m));
                 
                 
             };
