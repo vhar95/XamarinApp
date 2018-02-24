@@ -15,8 +15,6 @@ namespace XamarinApp.modelo
         public CurseClassesView()
         {
 
-            
-
         }
     }
 }
