@@ -26,7 +26,17 @@ namespace XamarinApp.paginas
 		{
 			InitializeComponent ();
 
-                   }
+            BindingContext = new modelo.CurseClasses();
+
+            Post_List.ItemSelected += async (sender, e) =>
+            {
+                modelo.CurseClasses m = (modelo.CurseClasses)e.SelectedItem;
+                System.Diagnostics.Debug.WriteLine(m.Nombre);
+
+                await DisplayAlert("Has tocado!", m.Nombre + "seleccionado!", "OK");
+            };
+
+        }
 
         protected override async void OnAppearing()
         {
