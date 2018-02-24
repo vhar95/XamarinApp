@@ -20,20 +20,20 @@ namespace XamarinApp.paginas
         private const string url = "https://apitwe.herokuapp.com/api/cursos";
         
         private HttpClient _Client = new HttpClient();
-        private ObservableCollection<modelo.CurseClasses> _post;
+        private ObservableCollection<modelo.CurseClassesView> _post;
         
         public Cursos ()
 		{
 			InitializeComponent ();
 
-            BindingContext = new modelo.CurseClasses();
+            BindingContext = new modelo.CurseClassesView();
 
             Post_List.ItemSelected += async (sender, e) =>
             {
-                modelo.CurseClasses m = (modelo.CurseClasses)e.SelectedItem;
-                System.Diagnostics.Debug.WriteLine(m.Nombre);
-
-                await DisplayAlert("Has tocado!", m.Nombre + "seleccionado!", "OK");
+                modelo.CurseClassesView m = (modelo.CurseClassesView)e.SelectedItem;
+                await Navigation.PushAsync(new paginas.Prueba(m));
+                
+                
             };
 
         }
@@ -41,8 +41,8 @@ namespace XamarinApp.paginas
         protected override async void OnAppearing()
         {
             var content = await _Client.GetStringAsync(url);
-            var post = JsonConvert.DeserializeObject<List<modelo.CurseClasses>>(content);
-            _post = new ObservableCollection<modelo.CurseClasses>(post);
+            var post = JsonConvert.DeserializeObject<List<modelo.CurseClassesView>>(content);
+            _post = new ObservableCollection<modelo.CurseClassesView>(post);
             Post_List.ItemsSource = _post;
             base.OnAppearing();
         }
