@@ -25,8 +25,8 @@ namespace XamarinApp.paginas
         public Cursos ()
 		{
 			InitializeComponent ();
+           
 
-            
         }
 
         protected override async void OnAppearing()
