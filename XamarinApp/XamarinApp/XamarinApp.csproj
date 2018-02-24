@@ -47,7 +47,6 @@
     <Compile Include="modelo\CurseClasses.cs" />
     <Compile Include="modelo\CurseClassesView.cs" />
     <Compile Include="modelo\CurseView.cs" />
-    <Compile Include="modelo\SelectableItemWrapper.cs" />
     <Compile Include="modelo\User.cs" />
     <Compile Include="modelo\UserView.cs" />
     <Compile Include="paginas\Contacto.xaml.cs">
@@ -79,9 +78,6 @@
     </Compile>
     <Compile Include="paginas\Noticias.xaml.cs">
       <DependentUpon>Noticias.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="paginas\Prueba.xaml.cs">
-      <DependentUpon>Prueba.xaml</DependentUpon>
     </Compile>
     <Compile Include="paginas\RegistroUser.xaml.cs">
       <DependentUpon>RegistroUser.xaml</DependentUpon>
@@ -186,12 +182,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="paginas\Contacto.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="paginas\Prueba.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
