@@ -32,15 +32,27 @@ namespace XamarinApp.paginas
                 Id_usuario = App.UserId
             };
 
+            
             string con = JsonConvert.SerializeObject(modelo);
             var content = new StringContent(con, Encoding.UTF8, "application/json");
             var result = await _Client.PostAsync(url, content);
             System.Diagnostics.Debug.WriteLine(con);
-            var code = result.IsSuccessStatusCode;
+            var code = result.StatusCode.ToString();
+            
             System.Diagnostics.Debug.WriteLine(code);
 
-            await DisplayAlert("Curso Asignado", "Dirigiendo a Mis Cursos", "Ok", "Cancelar");
-            await Navigation.PushAsync(new paginas.MisCursos());
+            if(code != "Created")
+            {
+                await DisplayAlert("Ya estas matriculado en este curso", "Dirigiendo a Cursos", "Ok", "Cancelar");
+                await Navigation.PushAsync(new paginas.Cursos());
+            }
+            else
+            {
+                await DisplayAlert("Curso Asignado", "Dirigiendo a Mis Cursos", "Ok", "Cancelar");
+                await Navigation.PushAsync(new paginas.MisCursos());
+            }
+
+            
 
         }
     }
