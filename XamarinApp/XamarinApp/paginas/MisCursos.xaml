@@ -3,7 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinApp.paginas.MisCursos" Title="Mis Cursos">
     <ContentPage.Content>
-        <StackLayout Spacing="10" Padding="10">
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <StackLayout Spacing="10" Padding="10">
+            
             <Label Text="Cursos Matriculados" FontSize="34"/>
             <Label x:Name="cursosno" Text="No tienes cursos asignados" FontSize="34" IsVisible="False"/>
             <ListView x:Name="Post_List">
@@ -22,5 +25,10 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
+            </StackLayout>
+            <ContentView x:Name="overlay" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"  AbsoluteLayout.LayoutFlags="All" Padding="10, 0" BackgroundColor="Black" Opacity="0.25">
+                <ActivityIndicator  WidthRequest="110" HeightRequest="70" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Color="#0072BD"/>
+            </ContentView>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

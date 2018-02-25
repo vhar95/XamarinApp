@@ -26,7 +26,9 @@ namespace XamarinApp.paginas
 		{
 			InitializeComponent ();
 
-            BindingContext = new modelo.CurseClassesView();
+            BindingContext = this;
+            this.IsBusy = false;
+            overlay.IsVisible = false;
 
             Post_List.ItemSelected += async (sender, e) =>
             {
@@ -40,11 +42,15 @@ namespace XamarinApp.paginas
 
         protected override async void OnAppearing()
         {
+            IsBusy = true;
+            overlay.IsVisible = true;
             var content = await _Client.GetStringAsync(url);
             var post = JsonConvert.DeserializeObject<List<modelo.CurseClassesView>>(content);
             _post = new ObservableCollection<modelo.CurseClassesView>(post);
             Post_List.ItemsSource = _post;
             base.OnAppearing();
+            IsBusy = false;
+            overlay.IsVisible = false;
         }
 
         

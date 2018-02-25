@@ -24,27 +24,33 @@ namespace XamarinApp.paginas
         public MisCursos()
         {
             InitializeComponent();
-            BindingContext = new modelo.CurseView();
+            BindingContext = this;
+            this.IsBusy = false;
 
         }
 
         protected override async void OnAppearing()
         {
+            IsBusy = true;
+            overlay.IsVisible = true;
             var response = await _Client.GetAsync(url + "/" + App.UserId);
             var code = response.IsSuccessStatusCode;
             
             if(code != false)
             {
+                
                 var content = await _Client.GetStringAsync(url+"/"+App.UserId);
                 var post = JsonConvert.DeserializeObject<List<modelo.CurseView>>(content);
                 _post = new ObservableCollection<modelo.CurseView>(post);
                 Post_List.ItemsSource = _post;
+                
             }
             else
             {
                 cursosno.IsVisible = true;
             }
-
+            IsBusy = false;
+            overlay.IsVisible = false;
             base.OnAppearing();
         }
     }

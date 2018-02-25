@@ -3,25 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinApp.paginas.Cursos" Title="Cursos">
     <ContentPage.Content>
-        <StackLayout Spacing="10" Padding="10">
-            <Label Text="Cursos Disponibles" FontSize="34"/>
-            <ListView x:Name="Post_List" SelectedItem="{Binding SelectedItem,Mode=TwoWay}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Vertical">
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="" FontSize="20"/>
-                                    <Label Text = "{Binding Nombre}" FontSize="20" TextColor="#FC0BB4"/>
-                                    <Label Text="   "/>
-                                    <Label Text = "{Binding Duracion}" FontSize="20" TextColor="#0072BD"/>
-                                    <Label Text = "mes/es" FontSize="20" TextColor="#0072BD"/>
-                                </StackLayout>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <StackLayout Spacing="10" Padding="10">
+                <Label Text="Cursos Disponibles" FontSize="34"/>
+                    <ListView x:Name="Post_List" SelectedItem="{Binding SelectedItem,Mode=TwoWay}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Vertical">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="" FontSize="20"/>
+                                            <Label Text = "{Binding Nombre}" FontSize="20" TextColor="#FC0BB4"/>
+                                            <Label Text="   "/>
+                                            <Label Text = "{Binding Duracion}" FontSize="20" TextColor="#0072BD"/>
+                                            <Label Text = "mes/es" FontSize="20" TextColor="#0072BD"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+            <ContentView x:Name="overlay" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"  AbsoluteLayout.LayoutFlags="All" Padding="10, 0" BackgroundColor="Black" Opacity="0.25">
+                <ActivityIndicator  WidthRequest="110" HeightRequest="70" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Color="#0072BD"/>
+            </ContentView>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
