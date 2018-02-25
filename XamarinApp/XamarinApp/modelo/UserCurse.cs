@@ -9,8 +9,8 @@ namespace XamarinApp.modelo
     public class UserCurse
     {
         public int ID { get; set; }
-        public int IdUser { get; set; }
-        public string Nombre { get; set; }
+        public int Id_usuario { get; set; }
+        public int Id_curso { get; set; }
         
     }
 }

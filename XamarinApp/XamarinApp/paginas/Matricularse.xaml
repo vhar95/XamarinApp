@@ -12,25 +12,33 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <StackLayout Grid.Row="1" Orientation="Vertical">
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White" Opacity="0.8">
                                 <Label FontSize = "20" Text="Detalles Curso" />
                             </StackLayout>
                         </StackLayout>
-                        <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+                        <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8" IsVisible="False">
                             <StackLayout Orientation="Vertical" Margin="40,20">
-                                <Label Text="{Binding Nombre}"/>
+                                <Label x:Name="Idcurso" Text="{Binding ID}"/>
                             </StackLayout>
                         </StackLayout>
                         <StackLayout Grid.Row="3" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                             <StackLayout Orientation="Vertical" Margin="40,20">
-                                <Label Text="{Binding Duracion}"/>
+                                <Label Text="Nombre"/>
+                                <Label Text="{Binding Nombre}"/>
                             </StackLayout>
                         </StackLayout>
                         <StackLayout Grid.Row="4" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                             <StackLayout Orientation="Vertical" Margin="40,20">
-                                <Button x:Name="Matricula" Text="ENTRAR AL CURSO" BackgroundColor="#0072BD" TextColor="White" FontSize="18" />
+                                <Label Text="Duracion"/>
+                                <Label Text="{Binding Duracion}"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Row="5" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
+                            <StackLayout Orientation="Vertical" Margin="40,20">
+                                <Button x:Name="Matricula" Text="ENTRAR AL CURSO" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Insertar"/>
                             </StackLayout>
                         </StackLayout>
 
