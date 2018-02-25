@@ -4,20 +4,17 @@
              x:Class="XamarinApp.paginas.MisCursos" Title="Mis Cursos">
     <ContentPage.Content>
         <StackLayout Spacing="10" Padding="10">
-            <Label Text="Cursos Disponibles" FontSize="34"/>
-            <ListView x:Name="list">
+            <Label Text="Cursos Matriculados" FontSize="34"/>
+            <Label x:Name="cursosno" Text="No tienes cursos asignados" FontSize="34" IsVisible="False"/>
+            <ListView x:Name="Post_List">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Vertical">
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="" FontSize="20"/>
-                                    <Label Text="{Binding Name}" TextColor="#FC0BB4" FontSize="20"/>
-                                    <Label Text="   "/>
-                                    <Label Text="{Binding Duration}" TextColor="#0072BD" FontSize="20"/>
-                                    <Label Text="mes/es" TextColor="#0072BD" FontSize="20"/>
-                                    <Label Text="   "/>
-                                    <Label Text="{Binding Location}" TextColor="#0072BD" FontSize="20"/>
+                                    <Label Text="{Binding NombreCurso}" TextColor="#FC0BB4" FontSize="20"/>
+                                    <Label Text=""/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell> 

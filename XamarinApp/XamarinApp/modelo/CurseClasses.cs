@@ -14,5 +14,6 @@ namespace XamarinApp.modelo
         public string Duracion { get; set; }
 
       
+       
     }
 }

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace XamarinApp.modelo
 {
-    public class CurseView
+    public class CurseView:Curse
     {
-        public List<Curse> Curses { get; set; }
+        
 
         public CurseView()
         {
-            Curses = new Curse().GetCurse();
+           
         }
     }
 }

@@ -14,7 +14,7 @@ namespace XamarinApp.paginas
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Matricularse : ContentPage
     {
-        private const string url = "http://localhost:8000/api/usuariocurso";
+        private const string url = "https://apitwe.herokuapp.com/api/usuariocurso";
         private HttpClient _Client = new HttpClient();
 
         public Matricularse(modelo.CurseClassesView curse)
@@ -38,6 +38,9 @@ namespace XamarinApp.paginas
             System.Diagnostics.Debug.WriteLine(con);
             var code = result.IsSuccessStatusCode;
             System.Diagnostics.Debug.WriteLine(code);
+
+            await DisplayAlert("Curso Asignado", "Dirigiendo a Mis Cursos", "Ok", "Cancelar");
+            await Navigation.PushAsync(new paginas.MisCursos());
 
         }
     }
