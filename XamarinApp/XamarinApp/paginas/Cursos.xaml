@@ -7,6 +7,7 @@
             <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
                 <StackLayout Spacing="10" Padding="10">
                 <Label Text="Cursos Disponibles" FontSize="34"/>
+                    <Label Text="Seleccione el curso a matricularse" FontSize="20"/>
                     <ListView x:Name="Post_List" SelectedItem="{Binding SelectedItem,Mode=TwoWay}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
