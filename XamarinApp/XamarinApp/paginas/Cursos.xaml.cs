@@ -16,8 +16,8 @@ namespace XamarinApp.paginas
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Cursos : ContentPage
 	{
-        private const string url = "http://localhost:8000/api/cursos";
-        //private const string url = "https://apitwe.herokuapp.com/api/cursos";
+        //private const string url = "http://localhost:8000/api/cursos";
+        private const string url = "https://apitwe.herokuapp.com/api/cursos";
         
         private HttpClient _Client = new HttpClient();
         private ObservableCollection<modelo.CurseClassesView> _post;
@@ -44,10 +44,13 @@ namespace XamarinApp.paginas
         {
             IsBusy = true;
             overlay.IsVisible = true;
+
             var content = await _Client.GetStringAsync(url);
             var post = JsonConvert.DeserializeObject<List<modelo.CurseClassesView>>(content);
             _post = new ObservableCollection<modelo.CurseClassesView>(post);
             Post_List.ItemsSource = _post;
+
+
             base.OnAppearing();
             IsBusy = false;
             overlay.IsVisible = false;

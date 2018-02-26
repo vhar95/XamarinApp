@@ -16,8 +16,8 @@ namespace XamarinApp.paginasAdmin
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CursosAdmin : ContentPage
 	{
-        private const string url = "http://localhost:8000/api/cursos";
-        //private const string url = "https://apitwe.herokuapp.com/api/cursos";
+        //private const string url = "http://localhost:8000/api/cursos";
+        private const string url = "https://apitwe.herokuapp.com/api/cursos";
         
         private HttpClient _Client = new HttpClient();
         private ObservableCollection<modelo.CurseClassesView> _post;

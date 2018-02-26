@@ -15,8 +15,8 @@ namespace XamarinApp.paginas
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginUser : ContentPage
     {
-        private const string url = "http://localhost:8000/api/usuarios/login/";
-        //private const string url = "https://apitwe.herokuapp.com/api/usuarios/login/";
+        //private const string url = "http://localhost:8000/api/usuarios/login/";
+        private const string url = "https://apitwe.herokuapp.com/api/usuarios/login/";
         
         private HttpClient _Client = new HttpClient();
 

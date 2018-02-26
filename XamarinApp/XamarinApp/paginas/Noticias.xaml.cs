@@ -15,8 +15,8 @@ namespace XamarinApp.paginas
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Noticias : ContentPage
     {
-        private const string url = "http://localhost:8000/api/noticias";
-        //private const string url = "https://apitwe.herokuapp.com/api/cursos";
+        //private const string url = "http://localhost:8000/api/noticias";
+        private const string url = "https://apitwe.herokuapp.com/api/noticias";
 
         private HttpClient _Client = new HttpClient();
         private ObservableCollection<modelo.NoticiaView> _post;
