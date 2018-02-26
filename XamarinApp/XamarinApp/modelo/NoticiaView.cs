@@ -13,7 +13,9 @@ namespace XamarinApp.modelo
     public class NoticiaView : Noticia
     {
         public ICommand Add { get; private set; }
-        private const string url = "http://localhost:8000/api/noticias";
+        //private const string url = "http://localhost:8000/api/noticias";
+        private const string url = "https://apitwe.herokuapp.com/api/noticias";
+        
         private HttpClient _Client = new HttpClient();
 
         public NoticiaView()
@@ -35,8 +37,6 @@ namespace XamarinApp.modelo
                 System.Diagnostics.Debug.WriteLine(con);
                 var code = result.IsSuccessStatusCode;
                 System.Diagnostics.Debug.WriteLine(code);
-                var f = result.Content;
-                System.Diagnostics.Debug.WriteLine(f);
 
 
             }

@@ -14,7 +14,8 @@ namespace XamarinApp.modelo
     {
         
         public ICommand Add { get; private set; }
-        private const string url = "http://localhost:8000/api/cursos";
+        //private const string url = "http://localhost:8000/api/cursos";
+        private const string url = "https://apitwe.herokuapp.com/api/cursos";
         private HttpClient _Client = new HttpClient();
 
         public CurseClassesView()

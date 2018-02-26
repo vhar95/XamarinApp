@@ -18,9 +18,9 @@ namespace XamarinApp.paginasAdmin
             this.BindingContext = new modelo.NoticiaView();
         }
 
-        private void Añadir_Volver(object sender, EventArgs e)
+        private async void Añadir_Volver(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new paginas.Noticias());
         }
     }
 }

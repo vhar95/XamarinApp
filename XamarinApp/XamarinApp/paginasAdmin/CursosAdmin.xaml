@@ -7,6 +7,7 @@
             <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
                 <StackLayout Spacing="10" Padding="10">
                 <Label Text="Cursos Disponibles" FontSize="34"/>
+                    <Label x:Name="cursosno" Text="No hay cursos disponibles" FontSize="34" IsVisible="False"/>
                     <ListView x:Name="Post_List">
                         <ListView.ItemTemplate>
                             <DataTemplate>

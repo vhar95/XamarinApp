@@ -25,20 +25,32 @@ namespace XamarinApp.paginas
             InitializeComponent();
             BindingContext = this;
             this.IsBusy = false;
-            //overlay.IsVisible = false;
+            overlay.IsVisible = false;
         }
 
         protected override async void OnAppearing()
         {
             IsBusy = true;
-            //overlay.IsVisible = true;
-            var content = await _Client.GetStringAsync(url);
-            var post = JsonConvert.DeserializeObject<List<modelo.NoticiaView>>(content);
-            _post = new ObservableCollection<modelo.NoticiaView>(post);
-            Post_List.ItemsSource = _post;
+            overlay.IsVisible = true;
+            var response = await _Client.GetAsync(url);
+            var code = response.IsSuccessStatusCode;
+            System.Diagnostics.Debug.WriteLine("noticia"+code);
+            if (code != false)
+            {
+                var content = await _Client.GetStringAsync(url);
+                var post = JsonConvert.DeserializeObject<List<modelo.NoticiaView>>(content);
+                _post = new ObservableCollection<modelo.NoticiaView>(post);
+                Post_List.ItemsSource = _post;
+            }
+            else
+            {
+                noticiasno.IsVisible = true;
+            }
+
+            
             base.OnAppearing();
             IsBusy = false;
-            //overlay.IsVisible = false;
+            overlay.IsVisible = false;
         }
     }
 }

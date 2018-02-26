@@ -36,10 +36,23 @@ namespace XamarinApp.paginasAdmin
         {
             IsBusy = true;
             overlay.IsVisible = true;
-            var content = await _Client.GetStringAsync(url);
-            var post = JsonConvert.DeserializeObject<List<modelo.CurseClassesView>>(content);
-            _post = new ObservableCollection<modelo.CurseClassesView>(post);
-            Post_List.ItemsSource = _post;
+
+            var response = await _Client.GetAsync(url);
+            var code = response.IsSuccessStatusCode;
+
+            if(code != false)
+            {
+                var content = await _Client.GetStringAsync(url);
+                var post = JsonConvert.DeserializeObject<List<modelo.CurseClassesView>>(content);
+                _post = new ObservableCollection<modelo.CurseClassesView>(post);
+                Post_List.ItemsSource = _post;
+            }
+            else
+            {
+                cursosno.IsVisible = true;
+            }
+          
+
             base.OnAppearing();
             IsBusy = false;
             overlay.IsVisible = false;
