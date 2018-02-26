@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Xamarin.Forms.Xaml; 
 
 namespace XamarinApp.paginasAdmin
 {
@@ -15,6 +15,7 @@ namespace XamarinApp.paginasAdmin
         public List<menuItems.MasterPageItem> menuList { get; set; }
         public MenuPrincipalAdmin ()
 		{
+
 			InitializeComponent ();
             menuList = new List<menuItems.MasterPageItem>();
 
