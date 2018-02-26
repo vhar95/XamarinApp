@@ -15,8 +15,8 @@ namespace XamarinApp.paginas
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginUser : ContentPage
     {
-        //private const string url = "http://localhost:8000/api/usuarios/login/";
-        private const string url = "https://apitwe.herokuapp.com/api/usuarios/login/";
+        private const string url = "http://localhost:8000/api/usuarios/login/";
+        //private const string url = "https://apitwe.herokuapp.com/api/usuarios/login/";
         
         private HttpClient _Client = new HttpClient();
 
@@ -46,12 +46,23 @@ namespace XamarinApp.paginas
                 App.UserNombre = get[0].Nombre;
                 App.UserCorreo = get[0].Correo;
                 App.UserId = get[0].id;
+                App.Admin = get[0].Admin;
 
                 await DisplayAlert("Login Correcto", "Logeado", "Ok", "Cancelar");
                 this.IsBusy = false;
                 overlay.IsVisible = false;
 
-                await Navigation.PushAsync(new paginas.MenuPrincipal());
+                if(App.Admin == 1)
+                {
+                    await Navigation.PushAsync(new paginas.Admin());
+                }
+                else
+                {
+                    await Navigation.PushAsync(new paginas.MenuPrincipal());
+                }
+                    
+
+                
             }
             else
             {

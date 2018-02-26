@@ -12,6 +12,8 @@ namespace XamarinApp
         public static int UserId { get; set; }
         public static string UserCorreo { get; set; }
         public static string UserNombre { get; set; }
+        public static int Admin { get; set; }
+
         public App()
         {
             InitializeComponent();
