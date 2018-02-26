@@ -10,31 +10,33 @@ using Xamarin.Forms;
 
 namespace XamarinApp.modelo
 {
-    public class CurseClassesView: CurseClasses
+    public class NoticiaView : Noticia
     {
-        
         public ICommand Add { get; private set; }
-        private const string url = "http://localhost:8000/api/cursos";
+        private const string url = "http://localhost:8000/api/noticias";
         private HttpClient _Client = new HttpClient();
 
-        public CurseClassesView()
+        public NoticiaView()
         {
             Add = new Command(async () => {
 
-                CurseClasses modelo = new CurseClasses()
+                Noticia modelo = new Noticia()
                 {
 
-                    Nombre = Nombre,
-                    Duracion = Duracion
+                    Titulo = Titulo,
+                    Descripcion = Descripcion
 
                 };
 
                 string con = JsonConvert.SerializeObject(modelo);
-                var content = new StringContent(con, Encoding.UTF8, "application/json");        
+                var content = new StringContent(con, Encoding.UTF8, "application/json");
+                System.Diagnostics.Debug.WriteLine(content.ToString());
                 var result = await _Client.PostAsync(url, content);
+                System.Diagnostics.Debug.WriteLine(con);
                 var code = result.IsSuccessStatusCode;
                 System.Diagnostics.Debug.WriteLine(code);
-
+                var f = result.Content;
+                System.Diagnostics.Debug.WriteLine(f);
 
 
             }

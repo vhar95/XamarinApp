@@ -3,24 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinApp.paginas.Noticias" Title="Noticias">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Spacing="10" Padding="10">
             <Label Text="Gracias a esta página, podrás estar al día de todas las novedades de nuestra academia de inglés." FontSize="20" HorizontalTextAlignment="Center"/>
-            <Grid x:Name="Gridd">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <StackLayout Grid.Row="1" Orientation="Vertical">
-                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10">
-                        <Label FontSize = "20" Text="NUEVO CURSO B2-FCE         " TextColor="#0072BD"/>
+            <ListView x:Name="Post_List">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10">
+                        <Label FontSize = "20" Text="{Binding Titulo}" TextColor="#0072BD"/>
                         <Label FontSize = "20" Text="-----------------------------------------" TextColor="#0072BD"/>
-                        <Label FontSize = "18" Text="Apúntate a nuestro grupo de preparación de FCE para las próximas convocatorias" TextColor="Black"/>
+                        <Label FontSize = "18" Text="{Binding Descripcion}" TextColor="Black"/>
                     </StackLayout>
-                </StackLayout>
-                
-            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

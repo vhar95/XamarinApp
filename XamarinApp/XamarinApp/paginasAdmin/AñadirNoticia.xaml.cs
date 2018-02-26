@@ -15,6 +15,12 @@ namespace XamarinApp.paginasAdmin
         public AñadirNoticia()
         {
             InitializeComponent();
+            this.BindingContext = new modelo.NoticiaView();
+        }
+
+        private void Añadir_Volver(object sender, EventArgs e)
+        {
+
         }
     }
 }
