@@ -19,8 +19,8 @@ namespace XamarinApp.paginasAdmin
             menuList = new List<menuItems.MasterPageItem>();
 
             var page1 = new menuItems.MasterPageItem() { Title = "Mi Perfil", Icon = "perfil.png", TargetType = typeof(paginas.MiPerfil) };
-            var page2 = new menuItems.MasterPageItem() { Title = "Añadir Curso", Icon = "perfil.png", TargetType = typeof(paginasAdmin.AñadirCurso) };
-            var page4 = new menuItems.MasterPageItem() { Title = "Añadir Noticia", Icon = "perfil.png", TargetType = typeof(paginasAdmin.AñadirNoticia) };
+            var page2 = new menuItems.MasterPageItem() { Title = "Añadir Curso", Icon = "addCurso.png", TargetType = typeof(paginasAdmin.AñadirCurso) };
+            var page4 = new menuItems.MasterPageItem() { Title = "Añadir Noticia", Icon = "addNoticia.png", TargetType = typeof(paginasAdmin.AñadirNoticia) };
             var page3 = new menuItems.MasterPageItem() { Title = "Cerrar Sesión", Icon = "out.png", TargetType = typeof(paginas.LogOut) };            
             var page5 = new menuItems.MasterPageItem() { Title = "Cursos", Icon = "cursos.png", TargetType = typeof(paginasAdmin.CursosAdmin) };          
             var page7 = new menuItems.MasterPageItem() { Title = "Noticias", Icon = "noticias.png", TargetType = typeof(paginas.Noticias) };

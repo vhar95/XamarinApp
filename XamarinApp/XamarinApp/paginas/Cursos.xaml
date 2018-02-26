@@ -6,6 +6,7 @@
         <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
                 <StackLayout Spacing="10" Padding="10">
+               
                 <Label Text="Cursos Disponibles" FontSize="34"/>
                     <Label Text="Seleccione el curso a matricularse" FontSize="20"/>
                     <Label x:Name="cursosno" Text="No hay cursos disponibles" FontSize="34" IsVisible="False"/>

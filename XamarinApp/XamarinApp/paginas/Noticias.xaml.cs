@@ -38,6 +38,7 @@ namespace XamarinApp.paginas
             if (code != false)
             {
                 var content = await _Client.GetStringAsync(url);
+                
                 var post = JsonConvert.DeserializeObject<List<modelo.NoticiaView>>(content);
                 _post = new ObservableCollection<modelo.NoticiaView>(post);
                 Post_List.ItemsSource = _post;

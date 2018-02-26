@@ -108,6 +108,8 @@
     <None Include="XamarinApp.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="addCurso.png" />
+    <Content Include="addNoticia.png" />
     <Content Include="carpeta.png" />
     <Content Include="carpetas.png" />
     <Content Include="contacto.png" />

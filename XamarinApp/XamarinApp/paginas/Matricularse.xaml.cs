@@ -26,7 +26,8 @@ namespace XamarinApp.paginas
 
         private async void Insertar(object sender, EventArgs e)
         {
-            
+            System.Diagnostics.Debug.WriteLine("curse id" + Int32.Parse(Idcurso.Text));
+            System.Diagnostics.Debug.WriteLine("user id" + App.UserId);
             modelo.UserCurse modelo = new modelo.UserCurse()
             {
                 Id_curso = Int32.Parse(Idcurso.Text),
