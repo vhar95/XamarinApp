@@ -9,12 +9,12 @@ using System.Net.Http;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace XamarinApp.paginas
+namespace XamarinApp.paginasAdmin
 {
    
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Cursos : ContentPage
+	public partial class CursosAdmin : ContentPage
 	{
         private const string url = "http://localhost:8000/api/cursos";
         //private const string url = "https://apitwe.herokuapp.com/api/cursos";
@@ -22,21 +22,13 @@ namespace XamarinApp.paginas
         private HttpClient _Client = new HttpClient();
         private ObservableCollection<modelo.CurseClassesView> _post;
         
-        public Cursos ()
+        public CursosAdmin ()
 		{
 			InitializeComponent ();
 
             BindingContext = this;
             this.IsBusy = false;
             overlay.IsVisible = false;
-
-            Post_List.ItemSelected += async (sender, e) =>
-            {
-                modelo.CurseClassesView m = (modelo.CurseClassesView)e.SelectedItem;
-                await Navigation.PushAsync(new paginas.Matricularse(m));
-                
-                
-            };
 
         }
 

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace XamarinApp.paginas
+namespace XamarinApp.paginasAdmin
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Admin : ContentPage
+    public partial class AñadirNoticia : ContentPage
     {
-        public Admin()
+        public AñadirNoticia()
         {
             InitializeComponent();
         }

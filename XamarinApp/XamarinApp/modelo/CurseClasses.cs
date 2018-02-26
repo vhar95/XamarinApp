@@ -7,13 +7,61 @@ using System.Threading.Tasks;
 
 namespace XamarinApp.modelo
 {
-    public class CurseClasses
+    public class CurseClasses : INotifyPropertyChanged
     {
-        public int ID { get; set; }
-        public string Nombre { get; set; }
-        public string Duracion { get; set; }
+        
+        private string nombre;
+        private string duracion;
 
-      
-       
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propiedad)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propiedad));
+            }
+        }
+
+
+        public string Nombre
+        {
+            get
+            {
+                return nombre;
+            }
+
+            set
+            {
+
+                if (nombre != value)
+                {
+                    nombre = value;
+                    OnPropertyChanged("nombre");
+                }
+
+            }
+        }
+
+        public string Duracion
+        {
+            get
+            {
+                return duracion;
+            }
+
+            set
+            {
+
+                if (duracion != value)
+                {
+                    duracion = value;
+                    OnPropertyChanged("duracion");
+                }
+
+            }
+        }
+
+        public int id { get; set; }
     }
 }

@@ -54,7 +54,7 @@ namespace XamarinApp.paginas
 
                 if(App.Admin == 1)
                 {
-                    await Navigation.PushAsync(new paginas.Admin());
+                    await Navigation.PushAsync(new paginasAdmin.MenuPrincipalAdmin());
                 }
                 else
                 {

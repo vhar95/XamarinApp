@@ -50,8 +50,17 @@
     <Compile Include="modelo\User.cs" />
     <Compile Include="modelo\UserCurse.cs" />
     <Compile Include="modelo\UserView.cs" />
-    <Compile Include="paginas\Admin.xaml.cs">
-      <DependentUpon>Admin.xaml</DependentUpon>
+    <Compile Include="paginasAdmin\AñadirCurso.xaml.cs">
+      <DependentUpon>AñadirCurso.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="paginasAdmin\AñadirNoticia.xaml.cs">
+      <DependentUpon>AñadirNoticia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="paginasAdmin\CursosAdmin.xaml.cs">
+      <DependentUpon>CursosAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="paginasAdmin\MenuPrincipalAdmin.xaml.cs">
+      <DependentUpon>MenuPrincipalAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="paginas\Contacto.xaml.cs">
       <DependentUpon>Contacto.xaml</DependentUpon>
@@ -200,7 +209,25 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="paginas\Admin.xaml">
+    <EmbeddedResource Include="paginasAdmin\MenuPrincipalAdmin.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="paginasAdmin\CursosAdmin.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="paginasAdmin\AñadirCurso.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="paginasAdmin\AñadirNoticia.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
