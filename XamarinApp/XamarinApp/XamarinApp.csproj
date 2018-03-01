@@ -39,6 +39,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="behaviors\EmailValidatorBehavior.cs" />
+    <Compile Include="behaviors\EntryLengthValidatorBehavior.cs" />
+    <Compile Include="behaviors\MaxLengthValidator.cs" />
+    <Compile Include="behaviors\NumberValidatorBehavior.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

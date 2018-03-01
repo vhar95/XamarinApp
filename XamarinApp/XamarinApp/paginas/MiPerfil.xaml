@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinApp.paginas.MiPerfil" Title="Mi Perfil">
+             x:Class="XamarinApp.paginas.MiPerfil" xmlns:local="clr-namespace:XamarinApp.behaviors" Title="Mi Perfil">
     <ContentPage.Content>
         <ScrollView>
             <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -27,18 +27,30 @@
                 </StackLayout>
                 <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Tu nombre" Text="{Binding Nombre}"/>
-                    </StackLayout>
+                        <Entry Placeholder="Tu nombre" Text="{Binding Nombre}">
+                                    <Entry.Behaviors>
+                                        <local:EntryLengthValidatorBehavior MaxLength="20" />
+                                    </Entry.Behaviors>
+                                </Entry>
+                            </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="3" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Tus apellidos" Text="{Binding Apellidos}"/>
-                    </StackLayout>
+                        <Entry Placeholder="Tus apellidos" Text="{Binding Apellidos}">
+                                    <Entry.Behaviors>
+                                        <local:EntryLengthValidatorBehavior MaxLength="50" />
+                                    </Entry.Behaviors>
+                                </Entry>
+                            </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="4" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Tu Nick de Usuario" Text="{Binding Nick}"/>
-                    </StackLayout>
+                        <Entry Placeholder="Tu Nick de Usuario" Text="{Binding Nick}">
+                                    <Entry.Behaviors>
+                                        <local:EntryLengthValidatorBehavior MaxLength="20" />
+                                    </Entry.Behaviors>
+                                </Entry>
+                            </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="5" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">

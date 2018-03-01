@@ -48,7 +48,7 @@ namespace XamarinApp.paginas
                 App.UserId = get[0].id;
                 App.Admin = get[0].Admin;
 
-                await DisplayAlert("Login Correcto", "Logeado", "Ok", "Cancelar");
+                await DisplayAlert("Login Correcto", "Logueado", "Ok", "Cancelar");
                 this.IsBusy = false;
                 overlay.IsVisible = false;
 
