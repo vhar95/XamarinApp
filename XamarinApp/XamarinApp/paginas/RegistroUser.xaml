@@ -28,7 +28,7 @@
                 </StackLayout>
                 <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Tu nombre" Text="{Binding Nombre}" >
+                        <Entry Placeholder="Tu nombre" Text="{Binding Nombre}" x:Name="Name">
                             <Entry.Behaviors>
                                 <local:EntryLengthValidatorBehavior MaxLength="20" />
                             </Entry.Behaviors>
@@ -37,7 +37,7 @@
                 </StackLayout>
                 <StackLayout Grid.Row="3" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Tus apellidos" Text="{Binding Apellidos}">
+                        <Entry Placeholder="Tus apellidos" Text="{Binding Apellidos}" x:Name="Surname">
                             <Entry.Behaviors>
                                 <local:EntryLengthValidatorBehavior MaxLength="50" />
                             </Entry.Behaviors>
@@ -46,7 +46,7 @@
                 </StackLayout>
                 <StackLayout Grid.Row="4" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Tu Nick de Usuario" Text="{Binding Nick}">
+                        <Entry Placeholder="Tu Nick de Usuario" Text="{Binding Nick}" x:Name="elNick">
                             <Entry.Behaviors>
                                 <local:EntryLengthValidatorBehavior MaxLength="20" />
                             </Entry.Behaviors>
@@ -55,27 +55,31 @@
                 </StackLayout>
                 <StackLayout Grid.Row="5" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Picker x:Name="pickerSexo" Title="Tu sexo" ItemsSource="{Binding Sexos}" SelectedItem="{Binding Sexo}" />
+                        <Picker x:Name="pickerSexo" Title="Tu sexo" ItemsSource="{Binding Sexos}" SelectedItem="{Binding Sexo}"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="6" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Tu correo electrónico" Text="{Binding Correo}"/>
+                        <Entry Placeholder="Tu correo electrónico" Text="{Binding Correo}" x:Name="correoE"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="7" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Tu contraseña" Text="{Binding Pass}" IsPassword="True"/>
+                        <Entry Placeholder="Tu contraseña" Text="{Binding Pass}" IsPassword="True" x:Name="Passwordd"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="8" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Tu teléfono" Text="{Binding Telefono}" Keyboard="Telephone"/>
+                        <Entry Placeholder="Tu teléfono" Text="{Binding Telefono}" Keyboard="Telephone" x:Name="Phone">
+                            <Entry.Behaviors>
+                                <local:EntryLengthValidatorBehavior MaxLength="12" />
+                            </Entry.Behaviors>
+                        </Entry>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="9" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Tu nombre de Usuario de Skype" Text="{Binding Skype}"/>
+                        <Entry Placeholder="Tu nombre de Usuario de Skype" Text="{Binding Skype}" x:Name="skypeUser"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="10" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
@@ -93,8 +97,7 @@
                     <StackLayout Orientation="Vertical" Margin="40,20">
                         <Button x:Name="Registro" Text="Registrarme en TWENIX" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Command="{Binding Guardar}" Clicked="Volver_Login"/>
                     </StackLayout>
-                </StackLayout>
-                
+                </StackLayout>                
             </Grid>
         </ScrollView>
     </ContentPage.Content>

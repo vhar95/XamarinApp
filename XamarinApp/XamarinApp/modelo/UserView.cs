@@ -101,7 +101,6 @@ namespace XamarinApp.modelo
                     Pass = Pass
                 };
 
-
                 string con = JsonConvert.SerializeObject(modelo);
                 var content = new StringContent(con, Encoding.UTF8, "application/json");
                 var result = await _Client.PutAsync(urlUpdate+App.UserId, content);
@@ -114,13 +113,8 @@ namespace XamarinApp.modelo
                     App.UserNombre = "";
                     App.Current.MainPage = new NavigationPage(new MainPage());
                 }
-               
-
             }
-           
-                );
-
-        
+          );
         }
     }
 }

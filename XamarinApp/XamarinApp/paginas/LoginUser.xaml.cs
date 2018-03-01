@@ -29,6 +29,19 @@ namespace XamarinApp.paginas
 
         private async void Principal_M(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(EntryCorreo.Text))
+            { 
+                await DisplayAlert("Error", "Debe ingresar una dirección de correo electrónico válida.", "Ok");
+                EntryCorreo.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty (EntryPassword.Text))
+            {
+                await DisplayAlert("Error", "Debe ingresar su contraseña.", "Ok");
+                EntryPassword.Focus();
+                return;
+            }
 
             this.IsBusy = true;
             overlay.IsVisible = true;
@@ -36,7 +49,6 @@ namespace XamarinApp.paginas
             var response = await _Client.GetAsync(url + EntryCorreo.Text + "/" + EntryPassword.Text);
             var code = response.IsSuccessStatusCode;
             System.Diagnostics.Debug.WriteLine(code);
-
 
             if (code != false)
             {
@@ -48,7 +60,7 @@ namespace XamarinApp.paginas
                 App.UserId = get[0].id;
                 App.Admin = get[0].Admin;
 
-                await DisplayAlert("Login Correcto", "Logueado", "Ok", "Cancelar");
+                await DisplayAlert("Login Correcto", "Logueado", "Ok");
                 this.IsBusy = false;
                 overlay.IsVisible = false;
 
@@ -60,17 +72,12 @@ namespace XamarinApp.paginas
                 {
                     await Navigation.PushAsync(new paginas.MenuPrincipal());
                 }
-                    
-
-                
             }
             else
             {
-
-                await DisplayAlert("Error Logueando", "Correo o Contraseña incorrectos o no existe", "Ok", "Cancelar");
+                await DisplayAlert("Error Logueando", "Correo o Contraseña incorrectos o no existen", "Ok");
                 this.IsBusy = false;
                 overlay.IsVisible = false;
-
             }
         }
     }
