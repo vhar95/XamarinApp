@@ -31,6 +31,13 @@ namespace XamarinApp.paginas
         {
             if (string.IsNullOrEmpty(EntryCorreo.Text))
             { 
+                await DisplayAlert("Error", "Debe ingresar una dirección de correo electrónico.", "Ok");
+                EntryCorreo.Focus();
+                return;
+            }
+
+            if (!emailValidator.IsValid)
+            {
                 await DisplayAlert("Error", "Debe ingresar una dirección de correo electrónico válida.", "Ok");
                 EntryCorreo.Focus();
                 return;

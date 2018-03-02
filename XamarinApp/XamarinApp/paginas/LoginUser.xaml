@@ -20,8 +20,12 @@
             </StackLayout>
             <StackLayout Grid.Row="2" Orientation="Vertical" Opacity="0.8">
                 <StackLayout Orientation="Vertical" Margin="40,20">
-                    <Entry Text="" x:Name="EntryCorreo" Placeholder="Tu correo"/>
-                </StackLayout>
+                            <Entry Text="" x:Name="EntryCorreo" Placeholder="Tu correo" Keyboard="Email">
+                                <Entry.Behaviors>
+                                    <local:EmailValidatorBehavior x:Name="emailValidator" />
+                                </Entry.Behaviors>
+                            </Entry>
+                        </StackLayout>
             </StackLayout>
             <StackLayout Grid.Row="3" Orientation="Vertical" Opacity="0.8">
                 <StackLayout Orientation="Vertical" Margin="40,20">

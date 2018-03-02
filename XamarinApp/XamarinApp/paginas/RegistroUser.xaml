@@ -60,7 +60,11 @@
                 </StackLayout>
                 <StackLayout Grid.Row="6" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Tu correo electrónico" Text="{Binding Correo}" x:Name="correoE"/>
+                        <Entry Placeholder="Tu correo electrónico" Keyboard="Email" Text="{Binding Correo}" x:Name="correoE">
+                            <Entry.Behaviors>
+                                <local:EmailValidatorBehavior x:Name="emailValidator" />
+                            </Entry.Behaviors>
+                        </Entry>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="7" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">

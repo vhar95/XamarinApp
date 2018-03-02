@@ -55,6 +55,13 @@ namespace XamarinApp.paginas
                 return;
             }
 
+            if (!emailValidator.IsValid)
+            {
+                await DisplayAlert("Correo inválido", "Debe ingresar una dirección de correo electrónico válida.", "Ok");
+                correoE.Focus();
+                return;
+            }
+
             if (string.IsNullOrEmpty(Passwordd.Text))
             {
                 await DisplayAlert("Existen campos obligatorios vacíos", "Por favor, introduzca su contraseña.", "Ok");
@@ -65,6 +72,13 @@ namespace XamarinApp.paginas
             if (string.IsNullOrEmpty(Phone.Text))
             {
                 await DisplayAlert("Existen campos obligatorios vacíos", "Por favor, indíquenos su número de teléfono.", "Ok");
+                Phone.Focus();
+                return;
+            }
+            
+            if (Phone.Text.Length < 9)
+            {
+                await DisplayAlert("Número de teléfono inválido", "El número de teléfono debe tener al menos 9 dígitos.", "Ok");
                 Phone.Focus();
                 return;
             }

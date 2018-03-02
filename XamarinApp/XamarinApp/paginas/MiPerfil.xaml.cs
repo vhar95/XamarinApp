@@ -39,8 +39,74 @@ namespace XamarinApp.paginas
             overlay.IsVisible = false;
             BindingContext = get;
             base.OnAppearing();
+        }
 
+        private async void Validar_Campos(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Nameee.Text))
+            {
+                await DisplayAlert("Existen campos obligatorios vacíos", "Por favor, indíquenos su nombre.", "Ok");
+                Nameee.Focus();
+                return;
+            }
 
+            if (string.IsNullOrEmpty(Surnameee.Text))
+            {
+                await DisplayAlert("Existen campos obligatorios vacíos", "Por favor, indíquenos cuáles son sus apellidos.", "Ok");
+                Surnameee.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(elNickkk.Text))
+            {
+                await DisplayAlert("Existen campos obligatorios vacíos", "Por favor, indíquenos cuál será su nuevo Nick de Usuario.", "Ok");
+                elNickkk.Focus();
+                return;
+            }
+
+            if (pickerSexooo.SelectedIndex == -1)
+            {
+                await DisplayAlert("Existen campos obligatorios vacíos", "Por favor, indíquenos cuál es su sexo.", "Ok");
+                pickerSexooo.Focus();
+                return;
+            }
+
+            if (!emailValidatorrr.IsValid)
+            {
+                await DisplayAlert("Correo inválido", "Por favor, especifique una dirección de correo electrónico válida.", "Ok");
+                correoEEE.Focus();                
+            }
+                                   
+            if (string.IsNullOrEmpty(Phoneee.Text))
+            {
+                await DisplayAlert("Existen campos obligatorios vacíos", "Por favor, indíquenos su número de teléfono.", "Ok");
+                Phoneee.Focus();
+                return;
+            }
+
+            if (Phoneee.Text.Length < 9)
+            {
+                await DisplayAlert("Número de teléfono inválido", "El número de teléfono debe tener al menos 9 dígitos.", "Ok");
+                Phoneee.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(skypeUserrr.Text))
+            {
+                await DisplayAlert("Existen campos obligatorios vacíos", "Por favor, indíquenos su nombre de Usuario de Skype.", "Ok");
+                skypeUserrr.Focus();
+                return;
+            }
+
+            if (pickerNivelll.SelectedIndex == -1)
+            {
+                await DisplayAlert("Existen campos obligatorios vacíos", "Por favor, indíquenos cuál es su nivel de inglés actual.", "Ok");
+                pickerNivelll.Focus();
+                return;
+            }
+
+            await DisplayAlert("Hecho!!", "Sus datos se han actualizado correctamente.", "Volver al Menú Principal");
+            
         }
     }
 }
