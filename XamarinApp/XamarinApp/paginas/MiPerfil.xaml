@@ -93,7 +93,7 @@
                 </StackLayout>
                 <StackLayout Grid.Row="11" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                                <Button x:Name="Registro" Text="ACTUALIZAR MIS DATOS" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Validar_Campos" Command="{Binding Update}"/>
+                                <Button x:Name="Registro" Text="ACTUALIZAR MIS DATOS" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Validar_Campos" />
                     </StackLayout>
                 </StackLayout>
                 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,6 +16,7 @@ namespace XamarinApp.paginas
 		{
 			InitializeComponent ();
             this.BindingContext = new modelo.UserView();
+            
         }
 
         private async void Volver_Login(object sender, EventArgs e)
@@ -97,8 +98,16 @@ namespace XamarinApp.paginas
                 return;
             }
 
-            await DisplayAlert("¡¡¡Enhorabuena!!!", "Ya eres TWENIX!!", "Volver al Menú Principal");
-            await Navigation.PushAsync(new MainPage());
+
+            modelo.UserView m = this.BindingContext as modelo.UserView;
+            if ((m != null) && (m.Guardar.CanExecute(null)))
+            {
+                m.Guardar.Execute(null);
+                await DisplayAlert("¡¡¡Enhorabuena!!!", "Ya eres TWENIX!!", "Volver al Menú Principal");
+                await Navigation.PushAsync(new MainPage());
+            }
+
+
         }
 
     }

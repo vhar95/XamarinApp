@@ -20,7 +20,21 @@ namespace XamarinApp.paginasAdmin
 
         private async void Añadir_Volver(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new paginas.Noticias());
+            if (string.IsNullOrEmpty(noticiaaa.Text))
+            {
+                await DisplayAlert("Existen campos obligatorios vacíos", "Por favor, introduzca el título de la nueva noticia.", "Ok");
+                noticiaaa.Focus();
+                return;
+            }
+
+            modelo.NoticiaView m = this.BindingContext as modelo.NoticiaView;
+            if ((m != null) && (m.Add.CanExecute(null)))
+            {
+                m.Add.Execute(null);
+                await DisplayAlert("Noticia Añadida Correctamente", "", "OK");
+                await Navigation.PushAsync(new paginas.Noticias());
+            }
+            
         }
     }
 }

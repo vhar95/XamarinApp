@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinApp.paginasAdmin.AñadirNoticia" Title="Añadir Noticia">
+             x:Class="XamarinApp.paginasAdmin.AñadirNoticia" xmlns:local="clr-namespace:XamarinApp.behaviors" Title="Añadir Noticia">
     <ContentPage.Content>
         <ScrollView>
             <Grid x:Name="LayoutRoot" BackgroundColor="White">
@@ -14,23 +14,27 @@
                 </Grid.RowDefinitions>
                 <StackLayout Grid.Row="1" Orientation="Vertical">
                     <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White" Opacity="0.8">
-                        <Label FontSize = "20" Text="Introduce datos de la noticia" />
+                        <Label FontSize = "20" Text="Introduzca los datos de la noticia" />
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Titulo Noticia" Text="{Binding Titulo}"/>
+                        <Entry Placeholder="Título de la noticia" Text="{Binding Titulo}" x:Name="noticiaaa">
+                            <Entry.Behaviors>
+                                <local:EntryLengthValidatorBehavior MaxLength="20" />
+                            </Entry.Behaviors>
+                        </Entry>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="3" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Label Text="Descripcion"></Label>
+                        <Label Text="Descripción"></Label>
                         <Editor VerticalOptions="FillAndExpand" Text="{Binding Descripcion}" Keyboard="Chat" HeightRequest="150"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="4" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Button x:Name="Añadir" Text="Añadir Noticia" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Añadir_Volver" Command="{Binding Add}"/>
+                        <Button x:Name="Añadir" Text="Añadir Noticia" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Añadir_Volver"/>
                     </StackLayout>
                 </StackLayout>
 

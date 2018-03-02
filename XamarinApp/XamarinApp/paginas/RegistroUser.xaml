@@ -99,7 +99,7 @@
                 </StackLayout>
                 <StackLayout Grid.Row="12" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Button x:Name="Registro" Text="Registrarme en TWENIX" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Command="{Binding Guardar}" Clicked="Volver_Login"/>
+                        <Button x:Name="Registro" Text="Registrarme en TWENIX" BackgroundColor="#0072BD" TextColor="White" FontSize="18"  Clicked="Volver_Login"/>
                     </StackLayout>
                 </StackLayout>                
             </Grid>

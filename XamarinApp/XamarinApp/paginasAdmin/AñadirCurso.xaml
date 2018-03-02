@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinApp.paginasAdmin.AñadirCurso" Title="Añadir Curso">
+             x:Class="XamarinApp.paginasAdmin.AñadirCurso" xmlns:local="clr-namespace:XamarinApp.behaviors" Title="Añadir Curso">
     <ContentPage.Content>
         <ScrollView>
             <Grid x:Name="LayoutRoot" BackgroundColor="White">
@@ -14,22 +14,30 @@
                 </Grid.RowDefinitions>
                 <StackLayout Grid.Row="1" Orientation="Vertical">
                     <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White" Opacity="0.8">
-                        <Label FontSize = "20" Text="Introduce datos del curso" />
+                        <Label FontSize = "20" Text="Introduzca los datos del curso" />
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Nombre del curso" Text="{Binding Nombre}"/>
+                        <Entry Placeholder="Nombre del curso" Text="{Binding Nombre}" x:Name="cursillo">
+                            <Entry.Behaviors>
+                                <local:EntryLengthValidatorBehavior MaxLength="20" />
+                            </Entry.Behaviors>
+                        </Entry>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="3" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Entry Placeholder="Duracion" Text="{Binding Duracion}"/>
+                        <Entry Placeholder="Duración en meses" Text="{Binding Duracion}" Keyboard="Numeric" x:Name="durationnn">
+                            <Entry.Behaviors>
+                                <local:EntryLengthValidatorBehavior MaxLength="2" />
+                            </Entry.Behaviors>
+                        </Entry>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="4" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                     <StackLayout Orientation="Vertical" Margin="40,20">
-                        <Button x:Name="Añadir" Text="Añadir Curso" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Añadir_Volver" Command="{Binding Add}"/>
+                        <Button x:Name="Añadir" Text="Añadir Curso" BackgroundColor="#0072BD" TextColor="White" FontSize="18" Clicked="Añadir_Volver" />
                     </StackLayout>
                 </StackLayout>
 

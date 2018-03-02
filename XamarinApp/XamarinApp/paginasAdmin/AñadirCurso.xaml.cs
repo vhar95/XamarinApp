@@ -23,7 +23,28 @@ namespace XamarinApp.paginasAdmin
 
         private async void Añadir_Volver(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new paginasAdmin.CursosAdmin());
+            if (string.IsNullOrEmpty(cursillo.Text))
+            {
+                await DisplayAlert("Existen campos obligatorios vacíos", "Por favor, introduzca el nombre del nuevo curso.", "Ok");
+                cursillo.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(durationnn.Text))
+            {
+                await DisplayAlert("Existen campos obligatorios vacíos", "Por favor, introduzca la duración del curso (en meses).", "Ok");
+                durationnn.Focus();
+                return;
+            }
+
+            modelo.CurseClassesView m = this.BindingContext as modelo.CurseClassesView;
+            if ((m != null) && (m.Add.CanExecute(null)))
+            {
+                m.Add.Execute(null);
+                await DisplayAlert("Curso Añadido Correctamente", "", "OK");
+                await Navigation.PushAsync(new paginasAdmin.CursosAdmin());
+            }
+            
         }
     }
 }

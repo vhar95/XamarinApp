@@ -4,8 +4,8 @@
              x:Class="XamarinApp.paginas.Matricularse" Title="Detalles Curso">
     <ContentPage.Content>
         <ScrollView>
-            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="White">
                     <Grid x:Name="LayoutRoot" BackgroundColor="White">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
@@ -16,7 +16,7 @@
                         </Grid.RowDefinitions>
                         <StackLayout Grid.Row="1" Orientation="Vertical">
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10" BackgroundColor="White" Opacity="0.8">
-                                <Label FontSize = "20" Text="Detalles Curso" />
+                                <Label FontSize = "20" Text="Detalles del Curso" />
                             </StackLayout>
                         </StackLayout>
                         <StackLayout Grid.Row="2" Orientation="Vertical" BackgroundColor="White" Opacity="0.8" IsVisible="False">
@@ -32,7 +32,7 @@
                         </StackLayout>
                         <StackLayout Grid.Row="4" Orientation="Vertical" BackgroundColor="White" Opacity="0.8">
                             <StackLayout Orientation="Vertical" Margin="40,20">
-                                <Label Text="Duracion"/>
+                                <Label Text="Duración"/>
                                 <Label Text="{Binding Duracion}"/>
                             </StackLayout>
                         </StackLayout>

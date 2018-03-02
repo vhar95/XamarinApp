@@ -67,7 +67,7 @@ namespace XamarinApp.paginas
                 App.UserId = get[0].id;
                 App.Admin = get[0].Admin;
 
-                await DisplayAlert("Login Correcto", "Logueado", "Ok");
+                await DisplayAlert("Login Correcto", "Logueado.", "Ok");
                 this.IsBusy = false;
                 overlay.IsVisible = false;
 
@@ -82,7 +82,7 @@ namespace XamarinApp.paginas
             }
             else
             {
-                await DisplayAlert("Error Logueando", "Correo o Contraseña incorrectos o no existen", "Ok");
+                await DisplayAlert("Error Logueando", "Correo o Contraseña incorrectos o no existen.", "Ok");
                 this.IsBusy = false;
                 overlay.IsVisible = false;
             }

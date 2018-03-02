@@ -71,10 +71,18 @@ namespace XamarinApp.paginas
                 return;
             }
 
+            if (string.IsNullOrEmpty(correoEEE.Text))
+            {
+                await DisplayAlert("Existen campos obligatorios vacíos", "Por favor, introduzca una dirección de correo electrónico.", "Ok");
+                correoEEE.Focus();
+                return;
+            }
+
             if (!emailValidatorrr.IsValid)
             {
                 await DisplayAlert("Correo inválido", "Por favor, especifique una dirección de correo electrónico válida.", "Ok");
-                correoEEE.Focus();                
+                correoEEE.Focus();
+                return;
             }
                                    
             if (string.IsNullOrEmpty(Phoneee.Text))
@@ -105,7 +113,15 @@ namespace XamarinApp.paginas
                 return;
             }
 
-            await DisplayAlert("Hecho!!", "Sus datos se han actualizado correctamente.", "Volver al Menú Principal");
+            modelo.UserView m = this.BindingContext as modelo.UserView;
+            if ((m != null) && (m.Update.CanExecute(null)))
+            {
+                m.Update.Execute(null);
+                //await DisplayAlert("Hecho!!", "Sus datos se han actualizado correctamente.", "Volver al Menú Principal");
+                //await Navigation.PushAsync(new MainPage());
+
+            }
+            
             
         }
     }
