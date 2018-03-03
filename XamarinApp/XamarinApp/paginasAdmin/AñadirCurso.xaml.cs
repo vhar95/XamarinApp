@@ -42,7 +42,8 @@ namespace XamarinApp.paginasAdmin
             {
                 m.Add.Execute(null);
                 await DisplayAlert("Curso Añadido Correctamente", "", "OK");
-                await Navigation.PushAsync(new paginasAdmin.CursosAdmin());
+
+                await Navigation.PushAsync(new NavigationPage((Page)Activator.CreateInstance(typeof(CursosAdmin))));
             }
             
         }

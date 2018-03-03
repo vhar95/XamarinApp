@@ -25,7 +25,7 @@ namespace XamarinApp.paginasAdmin
         public CursosAdmin ()
 		{
 			InitializeComponent ();
-
+            
             BindingContext = this;
             this.IsBusy = false;
             overlay.IsVisible = false;

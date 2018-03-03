@@ -45,12 +45,12 @@ namespace XamarinApp.paginas
             if(code != "Created")
             {
                 await DisplayAlert("Ya estás matriculado en este curso", "", "Ok");
-                await Navigation.PushAsync(new paginas.Cursos());
+                await Navigation.PushAsync(new NavigationPage((Page)Activator.CreateInstance(typeof(paginas.Cursos))));
             }
             else
             {
                 await DisplayAlert("Curso Asignado", "", "Ok");
-                await Navigation.PushAsync(new paginas.MisCursos());
+                await Navigation.PushAsync(new NavigationPage((Page)Activator.CreateInstance(typeof(paginas.MisCursos))));
             }            
         }
     }

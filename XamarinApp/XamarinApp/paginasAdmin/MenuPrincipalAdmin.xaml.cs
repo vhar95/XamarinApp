@@ -17,6 +17,7 @@ namespace XamarinApp.paginasAdmin
 		{
 
 			InitializeComponent ();
+            
             menuList = new List<menuItems.MasterPageItem>();
 
             var page1 = new menuItems.MasterPageItem() { Title = "Mi Perfil", Icon = "perfil.png", TargetType = typeof(paginas.MiPerfil) };
