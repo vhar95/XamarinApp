@@ -41,16 +41,21 @@ namespace XamarinApp.paginas
             var code = result.StatusCode.ToString();
             
             System.Diagnostics.Debug.WriteLine(code);
-
+            var f = new MenuPrincipal();
             if(code != "Created")
             {
                 await DisplayAlert("Ya estás matriculado en este curso", "", "Ok");
-                await Navigation.PushAsync(new NavigationPage((Page)Activator.CreateInstance(typeof(paginas.Cursos))));
+                
+                f.Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(paginas.Cursos)));
+
+                App.Current.MainPage = f;
             }
             else
             {
                 await DisplayAlert("Curso Asignado", "", "Ok");
-                await Navigation.PushAsync(new NavigationPage((Page)Activator.CreateInstance(typeof(paginas.MisCursos))));
+                f.Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(paginas.MisCursos)));
+
+                App.Current.MainPage = f;
             }            
         }
     }

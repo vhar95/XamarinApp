@@ -32,7 +32,10 @@ namespace XamarinApp.paginasAdmin
             {
                 m.Add.Execute(null);
                 await DisplayAlert("Noticia Añadida Correctamente", "", "OK");
-                await Navigation.PushAsync(new NavigationPage((Page)Activator.CreateInstance(typeof(paginas.Noticias))));
+                var f = new MenuPrincipalAdmin();
+                f.Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(paginas.Noticias)));
+
+                App.Current.MainPage = f;
             }
             
         }

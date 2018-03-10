@@ -54,5 +54,7 @@ namespace XamarinApp.paginasAdmin
             Detail = new NavigationPage((Page)Activator.CreateInstance(page));
             IsPresented = false;
         }
+
+       
     }
 }
